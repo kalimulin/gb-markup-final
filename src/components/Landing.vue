@@ -20,9 +20,28 @@
             alt="menu"
           >
         </div>
+        <div class="header__user">
+          <img
+            src="@/assets/img/icon-user.svg"
+            alt="user"
+          >
+        </div>
+        <div class="header__cart">
+          <img
+            src="@/assets/img/icon-cart.svg"
+            alt="user"
+          >
+        </div>
       </div>
     </header>
     <section class="banner">
+      <div class="banner__left">
+        <img
+          src="/img/banner_man.png"
+          class="banner__left-img"
+          alt="banner"
+        >
+      </div>
       <div class="banner__text-block">
         <div class="banner__title">{{ TEXTS.banner_title }}</div>
         <div class="banner__subtitle" v-html="TEXTS.banner_subtitle"></div>
@@ -53,7 +72,7 @@
             :key="number"
             class="featured__item"
           >
-            <img :src="`/img/featured/${number+1}.jpg`">
+            <img :src="`img/featured/${number+1}.jpg`">
             <div class="featured__item-text">
               <div class="featured__item-title">{{ title }}</div>
               <div class="featured__item-desc">{{ desc }}</div>
@@ -104,7 +123,7 @@
       <div class="container">
         <div class="review__ava">
           <img
-            src="/img/avatar1.png"
+            src="img/avatar1.png"
             alt="user"
           >
         </div>
