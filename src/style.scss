@@ -1,0 +1,27 @@
+@import "@/assets/scss/reset-styles";
+@import "@/assets/scss/variables";
+
+html {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--NINJA);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
