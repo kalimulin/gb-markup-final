@@ -100,3 +100,56 @@ img {
     font-size: 5.34vw;
   }
 }
+
+.sections {
+  @include portrait {
+    padding: 17.07vw 0;
+  }
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+
+  @include portrait {
+    height: 65.87vw;
+  }
+
+  & + & {
+    @include portrait {
+      margin-top: 8.54vw;
+    }
+  }
+}
+
+.section:last-child {
+  @include portrait {
+    height: 29.6vw;
+  }
+}
+
+$sections: women, men, kids, accesories;
+
+@each $section in $sections {
+  .section_#{$section} {
+    background-image: url("@/assets/img/#{$section}.png");
+  }
+}
+
+.section__text {
+  text-align: center;
+}
+
+.section__text1 {
+  font-size: 4.27vw;
+  color: var(--WHITE);
+}
+
+.section__text2 {
+  font-size: 6.4vw;
+  font-weight: 700;
+  color: var(--STRAWBERRY_PINK);
+}
