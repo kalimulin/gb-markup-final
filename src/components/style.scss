@@ -27,6 +27,8 @@ img {
   display: flex;
 }
 
+// ------------------ Header ---------------------
+
 .header {
   background-color: var(--BLACK);
 }
@@ -51,6 +53,8 @@ img {
     margin-left: 10vw;
   }
 }
+
+// ------------------ Banner ---------------------
 
 .banner {
   display: flex;
@@ -100,6 +104,8 @@ img {
     font-size: 5.34vw;
   }
 }
+
+// ------------------ Sections ---------------------
 
 .sections {
   @include portrait {
@@ -152,4 +158,99 @@ $sections: women, men, kids, accesories;
   font-size: 6.4vw;
   font-weight: 700;
   color: var(--STRAWBERRY_PINK);
+}
+
+// ------------------ Featured ---------------------
+
+.featured {
+  text-align: center;
+  line-height: 1.4;
+
+  @include portrait {
+    padding-bottom: 25.6vw;
+  }
+}
+
+.featured__title {
+  @include portrait {
+    font-size: 8vw;
+  }
+}
+
+.featured__subtitle {
+  color: var(--COLD_GREY);
+
+  @include portrait {
+    font-size: 3.74vw;
+  }
+}
+
+.featured__items {
+  @include portrait {
+    margin-top: 17.3vw;
+  }
+}
+
+.featured__item {
+  text-align: left;
+  background-color: var(--PEARL);
+  cursor: pointer;
+
+  @include portrait {
+    padding-bottom: 5.07vw;
+  }
+
+  & + & {
+    @include portrait {
+      margin-top: 4.27vw;
+    }
+  }
+}
+
+.featured__item-text {
+  @include portrait {
+    padding: 0 4.27vw;
+  }
+}
+
+.featured__item-title {
+  color: var(--BLACK);
+  text-transform: uppercase;
+
+  @include portrait {
+    margin-top: 6.7vw;
+    font-size: 3.47vw;
+  }
+}
+
+.featured__item-desc {
+  color: var(--KNIGHTS_ARMOR);
+
+  @include portrait {
+    margin-top: 3.2vw;
+    font-size: 3.75vw;
+  }
+}
+
+.featured__item-price {
+  color: var(--STRAWBERRY_PINK);
+
+  @include portrait {
+    margin-top: 4.8vw;
+  }
+}
+
+.featured__browse-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .5vw solid var(--POMPELMO);
+  color: var(--PONCEAU);
+  font-size: 4.27vw;
+
+  @include portrait {
+    margin: 10.67vw auto 0;
+    width: 57.07vw;
+    height: 13.34vw;
+  }
 }

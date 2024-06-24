@@ -43,11 +43,34 @@
         </div>
       </div>
     </div>
+    <div class="featured">
+      <div class="container">
+        <div class="featured__title">{{ TEXTS.featured_title }}</div>
+        <div class="featured__subtitle">{{ TEXTS.featured_subtitle }}</div>
+        <div class="featured__items">
+          <div
+            v-for="({title, desc, price}, number) in FEATURED_ITEMS"
+            :key="number"
+            class="featured__item"
+          >
+            <img :src="`/img/featured/${number+1}.jpg`">
+            <div class="featured__item-text">
+              <div class="featured__item-title">{{ title }}</div>
+              <div class="featured__item-desc">{{ desc }}</div>
+              <div class="featured__item-price">{{ price }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="featured__browse-all">
+          <span>{{ TEXTS.browse_all }}</span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import { TEXTS, SECTIONS } from './constants'
+import { TEXTS, SECTIONS, FEATURED_ITEMS } from './constants'
 
 export default {
   name: 'LandingComponent',
@@ -57,6 +80,7 @@ export default {
   created () {
     this.TEXTS = TEXTS
     this.SECTIONS = SECTIONS
+    this.FEATURED_ITEMS = FEATURED_ITEMS
   }
 }
 </script>
