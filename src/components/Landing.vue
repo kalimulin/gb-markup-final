@@ -22,14 +22,25 @@
         </div>
       </div>
     </header>
+    <div class="banner">
+      <div class="banner__text-block">
+        <div class="banner__title">{{ TEXTS.banner_title }}</div>
+        <div class="banner__subtitle" v-html="TEXTS.banner_subtitle"></div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { TEXTS } from './constants'
+
 export default {
   name: 'LandingComponent',
   props: {
     msg: String
+  },
+  created () {
+    this.TEXTS = TEXTS
   }
 }
 </script>

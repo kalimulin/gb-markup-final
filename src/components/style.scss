@@ -1,8 +1,18 @@
 @import "@/assets/scss/mixins";
+@import "@/assets/scss/variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
 img {
   width: 100%;
   height: auto;
+}
+
+.landing {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--BLACK_OUT);
 }
 
 .container {
@@ -28,11 +38,65 @@ img {
 }
 
 .header__logo {
-  width: 11.76vw;
+  @include portrait {
+    width: 11.76vw;
+  }
 }
 
 .header__search {
-  width: 6.96vw;
-  margin-left: 10vw;
   margin-right: auto;
+
+  @include portrait {
+    width: 6.96vw;
+    margin-left: 10vw;
+  }
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--VENUS_PINK);
+
+  @include portrait {
+    height: 96.8vw;
+  }
+}
+
+.banner__text-block {
+  position: relative;
+
+  @include portrait {
+    padding-left: 7.47vw;
+    line-height: 1.1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--STRAWBERRY_PINK);
+
+    @include portrait {
+      width: 3.2vw;
+    }
+  }
+}
+
+.banner__title {
+  font-weight: 900;
+
+  @include portrait {
+    font-size: 10.2vw;
+  }
+}
+
+.banner__subtitle {
+  font-weight: 700;
+
+  @include portrait {
+    font-size: 5.34vw;
+  }
 }

@@ -11,35 +11,8 @@
 }
 
 @mixin portrait-tablet {
-  @media only screen and (orientation: portrait) and (min-aspect-ratio: 6/10) {
+  @media only screen and (orientation: portrait) and (min-width: 768px) {
     @content;
   }
 }
 
-@mixin landscape-tablet {
-  @media only screen and (orientation: landscape) and (max-aspect-ratio: 120/108) {
-    @content;
-  }
-}
-
-@mixin landscape-mobile {
-  @media only screen and (orientation: landscape) and (min-aspect-ratio: 160/70) {
-    @content;
-  }
-}
-
-@function rem($size) {
-  @return $size / $root-font-size * 1rem;
-}
-
-@function rem-smmax($size) {
-  @return $size * 1.875;
-}
-
-@function rem-md($size) {
-  @return $size * 1.5 / $root-font-size-sm * 1rem;
-}
-
-@function rem-sm($size) {
-  @return $size / $root-font-size-sm * 1rem;
-}
