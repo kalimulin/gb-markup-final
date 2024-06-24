@@ -1,11 +1,16 @@
 @import "@/assets/scss/mixins";
 @import "@/assets/scss/variables";
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 img {
   width: 100%;
   height: auto;
+}
+
+input {
+  border: 0;
+  outline: 0;
 }
 
 .landing {
@@ -252,5 +257,187 @@ $sections: women, men, kids, accesories;
     margin: 10.67vw auto 0;
     width: 57.07vw;
     height: 13.34vw;
+  }
+}
+
+// ------------------ Capabilities ---------------------
+
+.capabilities {
+  background-color: var(--VERIFIED_BLACK);
+  color: var(--WHITEOUT);
+
+  @include portrait {
+    padding: 15vw 0 25.3vw;
+  }
+}
+
+.capabilities__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+  color: var(--WHITEOUT);
+
+  & + & {
+    @include portrait {
+      margin-top: 14.5vw;
+    }
+  }
+}
+
+.capabilities__item-icon {
+  @include portrait {
+    width: 10vw;
+  }
+}
+
+.capabilities__item-title {
+  @include portrait {
+    margin-top: 6.5vw;
+    font-size: 6vw;
+  }
+}
+
+
+.capabilities__item-subtitle {
+  font-weight: 300;
+
+  @include portrait {
+    margin-top: 4.5vw;
+    font-size: 4.3vw;
+  }
+}
+
+// ------------------ Review ---------------------
+
+.review {
+  color: var(--VERIFIED_BLACK);
+  text-align: center;
+  line-height: 1 ;
+  background-image: url("@/assets/img/subscribe-bg.png");
+  background-size: cover;
+  background-position: center bottom;
+
+  @include portrait {
+    padding: 20vw 0 34vw;
+  }
+}
+
+.review__ava {
+  margin: 0 auto;
+
+  @include portrait {
+    width: 20vw;
+  }
+}
+
+.review__text {
+  font-style: italic;
+
+  @include portrait {
+    margin-top: 9vw;
+    font-size: 5.6vw;
+  }
+}
+
+// ------------------ Subscribe ---------------------
+
+.subscribe {
+  @include portrait {
+    margin-top: 18.5vw;
+  }
+}
+
+.subscribe__title {
+  font-weight: 700;
+  font-size: 7.5vw;
+}
+
+.subscribe__subtitle {
+  margin-top: 1vw;
+  font-size: 4.4vw;
+}
+
+.subscribe__email {
+  display: flex;
+
+  @include portrait {
+    margin-top: 7vw;
+    height: 15vw;
+    font-size: 4.4vw;
+    line-height: 15vw;
+  }
+}
+
+.subscribe__email-field {
+  background-color: var(--JUPITER);
+  flex-grow: 1;
+
+  @include portrait {
+    width: 61vw;
+    padding-left: 5vw;
+    border-radius: 7.5vw 0 0 7.5vw;
+  }
+}
+
+.subscribe__email-submit {
+  flex-shrink: 1;
+  background-color: var(--STRAWBERRY_PINK);
+  cursor: pointer;
+
+  @include portrait {
+    width: 40vw;
+    border-radius: 0 7.5vw 7.5vw 0;
+    color: var(--WHITE);
+  }
+}
+
+// ------------------ Copyright ---------------------
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--WHITEOUT);
+  background-color: var(--VERIFIED_BLACK);
+
+  @include portrait {
+    padding: 13.4vw 0 3vw;
+  }
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+
+  @include portrait {
+    gap: 2.5vw;
+  }
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--WHITE);
+
+  @include portrait {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+
+.footer__social-img {
+  @include portrait {
+    height: 5vw;
+    width: auto;
+  }
+}
+
+.footer__copyright {
+  @include portrait {
+    margin-top: 12.4vw;
+    font-size: 5vw;
   }
 }

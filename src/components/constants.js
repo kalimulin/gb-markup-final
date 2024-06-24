@@ -3,7 +3,13 @@ export const TEXTS = {
   banner_subtitle: 'OF LUXERIOUS <span>FASHION</span>',
   featured_title: 'Featured Items',
   featured_subtitle: 'Shop for items based on what we featured in this week',
-  browse_all: 'Browse All Product'
+  browse_all: 'Browse All Product',
+  review_text: '"Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum"',
+  subscribe_title: 'SUBSCRIBE',
+  subscribe_subtitle: 'FOR OUR NEWLETTER AND PROMOTION',
+  enter_email: 'Enter Your Email',
+  subscribe: 'Subscribe',
+  copyright: '© 2024  Brand  All Rights Reserved.'
 }
 
 export const SECTIONS = [
@@ -61,3 +67,18 @@ export const FEATURED_ITEMS = [
     price: '$52.00'
   }
 ]
+
+export const CAPABILITIES = {
+  freeDelivery: {
+    title: 'Free Delivery',
+    subtitle: 'Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.'
+  },
+  salesDiscounts: {
+    title: 'Sales & discounts',
+    subtitle: 'Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.'
+  },
+  qualityAssurance: {
+    title: 'Quality assurance',
+    subtitle: 'Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.'
+  }
+}
