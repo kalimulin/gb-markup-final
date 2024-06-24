@@ -8,7 +8,8 @@ export const TEXTS = {
   subscribe_title: 'SUBSCRIBE',
   subscribe_subtitle: 'FOR OUR NEWLETTER AND PROMOTION',
   enter_email: 'Enter Your Email',
-  subscribe: 'Subscribe'
+  subscribe: 'Subscribe',
+  copyright: '© 2024  Brand  All Rights Reserved.'
 }
 
 export const SECTIONS = [
