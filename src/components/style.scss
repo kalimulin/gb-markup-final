@@ -1,0 +1,256 @@
+@import "@/assets/scss/mixins";
+@import "@/assets/scss/variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.landing {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--BLACK_OUT);
+}
+
+.container {
+  @include portrait {
+    margin: 0 auto;
+    width: 91vw;
+  }
+}
+
+.landing__header {
+  height: 19.76vw;
+  display: flex;
+}
+
+// ------------------ Header ---------------------
+
+.header {
+  background-color: var(--BLACK);
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  @include portrait {
+    width: 11.76vw;
+  }
+}
+
+.header__search {
+  margin-right: auto;
+
+  @include portrait {
+    width: 6.96vw;
+    margin-left: 10vw;
+  }
+}
+
+// ------------------ Banner ---------------------
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--VENUS_PINK);
+
+  @include portrait {
+    height: 96.8vw;
+  }
+}
+
+.banner__text-block {
+  position: relative;
+
+  @include portrait {
+    padding-left: 7.47vw;
+    line-height: 1.1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--STRAWBERRY_PINK);
+
+    @include portrait {
+      width: 3.2vw;
+    }
+  }
+}
+
+.banner__title {
+  font-weight: 900;
+
+  @include portrait {
+    font-size: 10.2vw;
+  }
+}
+
+.banner__subtitle {
+  font-weight: 700;
+
+  @include portrait {
+    font-size: 5.34vw;
+  }
+}
+
+// ------------------ Sections ---------------------
+
+.sections {
+  @include portrait {
+    padding: 17.07vw 0;
+  }
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+
+  @include portrait {
+    height: 65.87vw;
+  }
+
+  & + & {
+    @include portrait {
+      margin-top: 8.54vw;
+    }
+  }
+}
+
+.section:last-child {
+  @include portrait {
+    height: 29.6vw;
+  }
+}
+
+$sections: women, men, kids, accesories;
+
+@each $section in $sections {
+  .section_#{$section} {
+    background-image: url("@/assets/img/#{$section}.png");
+  }
+}
+
+.section__text {
+  text-align: center;
+}
+
+.section__text1 {
+  font-size: 4.27vw;
+  color: var(--WHITE);
+}
+
+.section__text2 {
+  font-size: 6.4vw;
+  font-weight: 700;
+  color: var(--STRAWBERRY_PINK);
+}
+
+// ------------------ Featured ---------------------
+
+.featured {
+  text-align: center;
+  line-height: 1.4;
+
+  @include portrait {
+    padding-bottom: 25.6vw;
+  }
+}
+
+.featured__title {
+  @include portrait {
+    font-size: 8vw;
+  }
+}
+
+.featured__subtitle {
+  color: var(--COLD_GREY);
+
+  @include portrait {
+    font-size: 3.74vw;
+  }
+}
+
+.featured__items {
+  @include portrait {
+    margin-top: 17.3vw;
+  }
+}
+
+.featured__item {
+  text-align: left;
+  background-color: var(--PEARL);
+  cursor: pointer;
+
+  @include portrait {
+    padding-bottom: 5.07vw;
+  }
+
+  & + & {
+    @include portrait {
+      margin-top: 4.27vw;
+    }
+  }
+}
+
+.featured__item-text {
+  @include portrait {
+    padding: 0 4.27vw;
+  }
+}
+
+.featured__item-title {
+  color: var(--BLACK);
+  text-transform: uppercase;
+
+  @include portrait {
+    margin-top: 6.7vw;
+    font-size: 3.47vw;
+  }
+}
+
+.featured__item-desc {
+  color: var(--KNIGHTS_ARMOR);
+
+  @include portrait {
+    margin-top: 3.2vw;
+    font-size: 3.75vw;
+  }
+}
+
+.featured__item-price {
+  color: var(--STRAWBERRY_PINK);
+
+  @include portrait {
+    margin-top: 4.8vw;
+  }
+}
+
+.featured__browse-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .5vw solid var(--POMPELMO);
+  color: var(--PONCEAU);
+  font-size: 4.27vw;
+
+  @include portrait {
+    margin: 10.67vw auto 0;
+    width: 57.07vw;
+    height: 13.34vw;
+  }
+}
