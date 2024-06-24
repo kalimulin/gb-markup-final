@@ -8,6 +8,11 @@ img {
   height: auto;
 }
 
+input {
+  border: 0;
+  outline: 0;
+}
+
 .landing {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -301,5 +306,89 @@ $sections: women, men, kids, accesories;
   @include portrait {
     margin-top: 4.5vw;
     font-size: 4.3vw;
+  }
+}
+
+// ------------------ Review ---------------------
+
+.review {
+  color: var(--VERIFIED_BLACK);
+  text-align: center;
+  line-height: 1 ;
+  background-image: url("@/assets/img/subscribe-bg.png");
+  background-size: cover;
+  background-position: center bottom;
+
+  @include portrait {
+    padding: 20vw 0 34vw;
+  }
+}
+
+.review__ava {
+  margin: 0 auto;
+
+  @include portrait {
+    width: 20vw;
+  }
+}
+
+.review__text {
+  font-style: italic;
+
+  @include portrait {
+    margin-top: 9vw;
+    font-size: 5.6vw;
+  }
+}
+
+// ------------------ Subscribe ---------------------
+
+.subscribe {
+  @include portrait {
+    margin-top: 18.5vw;
+  }
+}
+
+.subscribe__title {
+  font-weight: 700;
+  font-size: 7.5vw;
+}
+
+.subscribe__subtitle {
+  margin-top: 1vw;
+  font-size: 4.4vw;
+}
+
+.subscribe__email {
+  display: flex;
+
+  @include portrait {
+    margin-top: 7vw;
+    height: 15vw;
+    font-size: 4.4vw;
+    line-height: 15vw;
+  }
+}
+
+.subscribe__email-field {
+  background-color: var(--JUPITER);
+  flex-grow: 1;
+
+  @include portrait {
+    width: 61vw;
+    padding-left: 5vw;
+    border-radius: 7.5vw 0 0 7.5vw;
+  }
+}
+
+.subscribe__email-submit {
+  flex-shrink: 1;
+  background-color: var(--STRAWBERRY_PINK);
+  cursor: pointer;
+
+  @include portrait {
+    width: 40vw;
+    border-radius: 0 7.5vw 7.5vw 0;
+    color: var(--WHITE);
   }
 }

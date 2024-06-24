@@ -3,7 +3,12 @@ export const TEXTS = {
   banner_subtitle: 'OF LUXERIOUS <span>FASHION</span>',
   featured_title: 'Featured Items',
   featured_subtitle: 'Shop for items based on what we featured in this week',
-  browse_all: 'Browse All Product'
+  browse_all: 'Browse All Product',
+  review_text: '"Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum"',
+  subscribe_title: 'SUBSCRIBE',
+  subscribe_subtitle: 'FOR OUR NEWLETTER AND PROMOTION',
+  enter_email: 'Enter Your Email',
+  subscribe: 'Subscribe'
 }
 
 export const SECTIONS = [
