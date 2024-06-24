@@ -25,11 +25,22 @@ input {
     margin: 0 auto;
     width: 91vw;
   }
+
+  @include portrait-tablet {
+    width: 95.84vw;
+  }
 }
 
 .landing__header {
-  height: 19.76vw;
   display: flex;
+
+  @include portrait {
+    height: 19.76vw;
+  }
+
+  @include portrait-tablet {
+    height: 9.63vw;
+  }
 }
 
 // ------------------ Header ---------------------
@@ -48,14 +59,53 @@ input {
   @include portrait {
     width: 11.76vw;
   }
+
+  @include portrait-tablet {
+    width: 4.27vw;
+  }
 }
 
 .header__search {
   margin-right: auto;
+  cursor: pointer;
 
   @include portrait {
     width: 6.96vw;
     margin-left: 10vw;
+  }
+
+  @include portrait-tablet {
+    width: 2.8vw;
+    padding-top: 1vw;
+    margin-left: 5.34vw;
+  }
+}
+
+.header__user {
+  cursor: pointer;
+
+  @include portrait {
+    display: none;
+  }
+
+  @include portrait-tablet {
+    display: block;
+    margin-left: 3.26vw;
+    width: 3.2vw;
+  }
+}
+
+.header__cart {
+  cursor: pointer;
+
+  @include portrait {
+    display: none;
+  }
+
+  @include portrait-tablet {
+    display: block;
+    margin-left: 5.5vw;
+    width: 3.6vw;
   }
 }
 
@@ -70,6 +120,24 @@ input {
   @include portrait {
     height: 96.8vw;
   }
+
+  @include portrait-tablet {
+    justify-content: space-between;
+    align-items: stretch;
+    height: 47vw;
+  }
+}
+
+.banner__left {
+  @include portrait-tablet {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+
+.banner__left-img {
+  max-height: 100%;
 }
 
 .banner__text-block {
@@ -78,6 +146,13 @@ input {
   @include portrait {
     padding-left: 7.47vw;
     line-height: 1.1;
+  }
+
+  @include portrait-tablet {
+    align-self: center;
+    padding-left: 3.65vw;
+    margin-right: 4.3vw;
+    line-height: 1.35;
   }
 
   &::before {
@@ -91,6 +166,10 @@ input {
     @include portrait {
       width: 3.2vw;
     }
+
+    @include portrait-tablet {
+      width: 1.57vw;
+    }
   }
 }
 
@@ -100,6 +179,10 @@ input {
   @include portrait {
     font-size: 10.2vw;
   }
+
+  @include portrait-tablet {
+    font-size: 5.74vw;
+  }
 }
 
 .banner__subtitle {
@@ -108,6 +191,14 @@ input {
   @include portrait {
     font-size: 5.34vw;
   }
+
+  @include portrait-tablet {
+    font-size: 3.13vw;
+  }
+
+  span {
+    color: var(--STRAWBERRY_PINK);
+  }
 }
 
 // ------------------ Sections ---------------------
@@ -115,6 +206,18 @@ input {
 .sections {
   @include portrait {
     padding: 17.07vw 0;
+  }
+
+  @include portrait-tablet {
+    padding: 8.47vw 0 14.2vw;
+  }
+
+  & > .container {
+    @include portrait-tablet {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -129,9 +232,18 @@ input {
     height: 65.87vw;
   }
 
+  @include portrait-tablet {
+    width: 30.2vw;
+    height: 24.35vw;
+  }
+
   & + & {
     @include portrait {
       margin-top: 8.54vw;
+    }
+
+    @include portrait-tablet {
+      margin-top: unset;
     }
   }
 }
@@ -139,6 +251,12 @@ input {
 .section:last-child {
   @include portrait {
     height: 29.6vw;
+  }
+
+  @include portrait-tablet {
+    width: 100%;
+    height: 15.1vw;
+    margin-top: 2.35vw;
   }
 }
 
@@ -152,17 +270,35 @@ $sections: women, men, kids, accesories;
 
 .section__text {
   text-align: center;
+
+  @include portrait-tablet {
+    line-height: 1.4;
+  }
 }
 
 .section__text1 {
-  font-size: 4.27vw;
   color: var(--WHITE);
+
+  @include portrait {
+    font-size: 4.27vw;
+  }
+
+  @include portrait-tablet {
+    font-size: 2.09vw;
+  }
 }
 
 .section__text2 {
-  font-size: 6.4vw;
   font-weight: 700;
   color: var(--STRAWBERRY_PINK);
+
+  @include portrait {
+    font-size: 6.4vw;
+  }
+
+  @include portrait-tablet {
+    font-size: 3.13vw;
+  }
 }
 
 // ------------------ Featured ---------------------
