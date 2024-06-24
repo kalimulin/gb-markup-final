@@ -61,3 +61,18 @@ export const FEATURED_ITEMS = [
     price: '$52.00'
   }
 ]
+
+export const CAPABILITIES = {
+  freeDelivery: {
+    title: 'Free Delivery',
+    subtitle: 'Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.'
+  },
+  salesDiscounts: {
+    title: 'Sales & discounts',
+    subtitle: 'Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.'
+  },
+  qualityAssurance: {
+    title: 'Quality assurance',
+    subtitle: 'Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.'
+  }
+}

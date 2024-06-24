@@ -1,7 +1,7 @@
 @import "@/assets/scss/mixins";
 @import "@/assets/scss/variables";
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 img {
   width: 100%;
@@ -252,5 +252,54 @@ $sections: women, men, kids, accesories;
     margin: 10.67vw auto 0;
     width: 57.07vw;
     height: 13.34vw;
+  }
+}
+
+// ------------------ Capabilities ---------------------
+
+.capabilities {
+  background-color: var(--VERIFIED_BLACK);
+  color: var(--WHITEOUT);
+
+  @include portrait {
+    padding: 15vw 0 25.3vw;
+  }
+}
+
+.capabilities__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+  color: var(--WHITEOUT);
+
+  & + & {
+    @include portrait {
+      margin-top: 14.5vw;
+    }
+  }
+}
+
+.capabilities__item-icon {
+  @include portrait {
+    width: 10vw;
+  }
+}
+
+.capabilities__item-title {
+  @include portrait {
+    margin-top: 6.5vw;
+    font-size: 6vw;
+  }
+}
+
+
+.capabilities__item-subtitle {
+  font-weight: 300;
+
+  @include portrait {
+    margin-top: 4.5vw;
+    font-size: 4.3vw;
   }
 }

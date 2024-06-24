@@ -22,13 +22,13 @@
         </div>
       </div>
     </header>
-    <div class="banner">
+    <section class="banner">
       <div class="banner__text-block">
         <div class="banner__title">{{ TEXTS.banner_title }}</div>
         <div class="banner__subtitle" v-html="TEXTS.banner_subtitle"></div>
       </div>
-    </div>
-    <div class="sections">
+    </section>
+    <section class="sections">
       <div class="container">
         <div
           v-for="{ str1, str2, classSuffix } in SECTIONS"
@@ -42,8 +42,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="featured">
+    </section>
+    <section class="featured">
       <div class="container">
         <div class="featured__title">{{ TEXTS.featured_title }}</div>
         <div class="featured__subtitle">{{ TEXTS.featured_subtitle }}</div>
@@ -65,12 +65,46 @@
           <span>{{ TEXTS.browse_all }}</span>
         </div>
       </div>
-    </div>
+    </section>
+    <section class="capabilities">
+      <div class="container">
+        <div class="capabilities__item">
+          <div class="capabilities__item-icon">
+            <img
+              src="@/assets/img/icon-truck.svg"
+              alt="delivery"
+            >
+          </div>
+          <div class="capabilities__item-title">{{ CAPABILITIES.freeDelivery.title }}</div>
+          <div class="capabilities__item-subtitle">{{ CAPABILITIES.freeDelivery.subtitle }}</div>
+        </div>
+        <div class="capabilities__item">
+          <div class="capabilities__item-icon">
+            <img
+              src="@/assets/img/icon-discount.svg"
+              alt="discounts"
+            >
+          </div>
+          <div class="capabilities__item-title">{{ CAPABILITIES.salesDiscounts.title }}</div>
+          <div class="capabilities__item-subtitle">{{ CAPABILITIES.salesDiscounts.subtitle }}</div>
+        </div>
+        <div class="capabilities__item">
+          <div class="capabilities__item-icon">
+            <img
+              src="@/assets/img/icon-crown.svg"
+              alt="quality"
+            >
+          </div>
+          <div class="capabilities__item-title">{{ CAPABILITIES.qualityAssurance.title }}</div>
+          <div class="capabilities__item-subtitle">{{ CAPABILITIES.qualityAssurance.subtitle }}</div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import { TEXTS, SECTIONS, FEATURED_ITEMS } from './constants'
+import { TEXTS, SECTIONS, FEATURED_ITEMS, CAPABILITIES } from './constants'
 
 export default {
   name: 'LandingComponent',
@@ -81,6 +115,7 @@ export default {
     this.TEXTS = TEXTS
     this.SECTIONS = SECTIONS
     this.FEATURED_ITEMS = FEATURED_ITEMS
+    this.CAPABILITIES = CAPABILITIES
   }
 }
 </script>
