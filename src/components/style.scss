@@ -1,0 +1,38 @@
+@import "@/assets/scss/mixins";
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  @include portrait {
+    margin: 0 auto;
+    width: 91vw;
+  }
+}
+
+.landing__header {
+  height: 19.76vw;
+  display: flex;
+}
+
+.header {
+  background-color: var(--BLACK);
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 11.76vw;
+}
+
+.header__search {
+  width: 6.96vw;
+  margin-left: 10vw;
+  margin-right: auto;
+}
