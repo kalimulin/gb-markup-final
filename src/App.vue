@@ -61,11 +61,11 @@
                 class="popup-menu__submenu"
               >
                 <li
-                  v-for="({ title }, number) in submenu"
+                  v-for="({ title, path }, number) in submenu"
                   :key="number"
                   class="popup-menu__submenu-item"
                 >
-                  {{ title }}
+                  <router-link :to="path" >{{ title }}</router-link>
                 </li>
               </ul>
             </li>

@@ -87,79 +87,79 @@ export const CAPABILITIES = {
 export const POPUP_MENU = [
   {
     title: 'MAN',
-    path: 'catalog',
+    path: '/catalog',
     submenu: [
       {
         title: 'Accessories',
-        path: 'catalog'
+        path: '/catalog'
       },
       {
         title: 'Bags',
-        path: 'catalog'
+        path: '/catalog'
       },
       {
         title: 'Denim',
-        path: 'catalog'
+        path: '/catalog'
       },
       {
         title: 'T-Shirts',
-        path: 'catalog'
+        path: '/catalog'
       }
     ]
   },
   {
     title: 'WOMAN',
-    path: 'catalog',
+    path: '/catalog',
     submenu: [
       {
         title: 'Accessories',
-        path: 'catalog'
+        path: '/catalog'
       },
       {
         title: 'Jackets & Coats',
-        path: 'catalog'
+        path: '/catalog'
       },
       {
         title: 'Polos',
-        path: 'catalog'
+        path: '/catalog'
       },
       {
         title: 'T-Shirts',
-        path: 'catalog'
+        path: '/catalog'
       },
       {
         title: 'Shirts',
-        path: 'catalog'
+        path: '/catalog'
       }
     ]
   },
   {
     title: 'KIDS',
-    path: 'catalog',
+    path: '/catalog',
     submenu: [
       {
         title: 'Accessories',
-        path: 'catalog'
+        path: '/catalog'
       },
       {
         title: 'Jackets & Coats',
-        path: 'catalog'
+        path: '/catalog'
       },
       {
         title: 'Polos',
-        path: 'catalog'
+        path: '/catalog'
       },
       {
         title: 'T-Shirts',
-        path: 'catalog'
+        path: '/catalog'
       },
       {
         title: 'Shirts',
-        path: 'catalog'
+        path: '/catalog'
       },
       {
         title: 'Bags',
-        path: 'catalog'
+        path: '/catalog'
       }
     ]
   }
