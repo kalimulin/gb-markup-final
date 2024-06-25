@@ -1,18 +1,23 @@
-@mixin portrait {
-  @media only screen and (orientation: portrait) {
+@mixin mobile-only {
+  @media only screen and (max-width: 767px) {
     @content;
   }
 }
 
-@mixin landscape {
-  @media only screen and (orientation: landscape) {
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
     @content;
   }
 }
 
-@mixin portrait-tablet {
-  @media only screen and (orientation: portrait) and (min-width: 768px) {
+@mixin tablet-only {
+  @media only screen and (min-width: 768px) and (max-width: 1919px) {
     @content;
   }
 }
 
+@mixin desktop {
+  @media only screen and (min-width: 1600px) {
+    @content;
+  }
+}
