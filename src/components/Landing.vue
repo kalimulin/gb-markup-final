@@ -72,7 +72,7 @@
             :key="number"
             class="featured__item"
           >
-            <img :src="`img/featured/${number+1}.jpg`">
+            <img :src="`img/featured/${number+1}.jpg`" alt="featured" >
             <div class="featured__item-text">
               <div class="featured__item-title">{{ title }}</div>
               <div class="featured__item-desc">{{ desc }}</div>
