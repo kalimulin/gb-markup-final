@@ -310,11 +310,19 @@ $sections: women, men, kids, accesories;
   @include portrait {
     padding-bottom: 25.6vw;
   }
+
+  @include portrait-tablet {
+    padding-bottom: 8.4vw;
+  }
 }
 
 .featured__title {
   @include portrait {
     font-size: 8vw;
+  }
+
+  @include portrait-tablet {
+    font-size: 3.9vw;
   }
 }
 
@@ -324,11 +332,23 @@ $sections: women, men, kids, accesories;
   @include portrait {
     font-size: 3.74vw;
   }
+
+  @include portrait-tablet {
+    font-size: 1.83vw;
+  }
 }
 
 .featured__items {
   @include portrait {
     margin-top: 17.3vw;
+  }
+
+  @include portrait-tablet {
+    margin-top: 9.38vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2.09vw;
   }
 }
 
@@ -341,9 +361,18 @@ $sections: women, men, kids, accesories;
     padding-bottom: 5.07vw;
   }
 
+  @include portrait-tablet {
+    padding-bottom: 5.07vw;
+    flex-basis: 46.88vw;
+  }
+
   & + & {
     @include portrait {
       margin-top: 4.27vw;
+    }
+
+    @include portrait-tablet {
+      margin-top: unset;
     }
   }
 }
@@ -351,6 +380,10 @@ $sections: women, men, kids, accesories;
 .featured__item-text {
   @include portrait {
     padding: 0 4.27vw;
+  }
+
+  @include portrait-tablet {
+    padding: 0 2.09vw;
   }
 }
 
@@ -362,6 +395,11 @@ $sections: women, men, kids, accesories;
     margin-top: 6.7vw;
     font-size: 3.47vw;
   }
+
+  @include portrait-tablet {
+    margin-top: 3.26vw;
+    font-size: 1.7vw;
+  }
 }
 
 .featured__item-desc {
@@ -371,6 +409,11 @@ $sections: women, men, kids, accesories;
     margin-top: 3.2vw;
     font-size: 3.75vw;
   }
+
+  @include portrait-tablet {
+    margin-top: 1.64vw;
+    font-size: 1.83vw;
+  }
 }
 
 .featured__item-price {
@@ -378,6 +421,11 @@ $sections: women, men, kids, accesories;
 
   @include portrait {
     margin-top: 4.8vw;
+  }
+
+  @include portrait-tablet {
+    margin-top: 2.35vw;
+    font-size: 2.09vw;
   }
 }
 
@@ -393,6 +441,14 @@ $sections: women, men, kids, accesories;
     margin: 10.67vw auto 0;
     width: 57.07vw;
     height: 13.34vw;
+  }
+
+  @include portrait-tablet {
+    margin: 4.17vw auto 0;
+    width: 27.87vw;
+    height: 6.52vw;
+    font-size: 2.09vw;
+    border-width: .15vw;
   }
 }
 
