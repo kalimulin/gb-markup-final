@@ -57,6 +57,10 @@ input {
   @include tablet {
     height: 9.63vw;
   }
+
+  @include desktop {
+    height: 75px;
+  }
 }
 
 // ------------------ Header ---------------------
@@ -147,6 +151,14 @@ input {
   top: 19.76vw;
   background-color: var(--WHITE);
   z-index: 5;
+
+  @include tablet {
+    top: 9.63vw;
+  }
+
+  @include desktop {
+    top: 75px;
+  }
 }
 
 // ------------------ Popup menu -----------------
@@ -154,13 +166,14 @@ input {
 .popup-menu {
   padding: 34px;
   width: 232px;
+  box-shadow: 6px 4px 35px 0 var(--BLACK_021);
 }
 
 .popup-menu__close {
   position: absolute;
-  right: 4.27vw;
-  top: 4.27vw;
-  width: 3.2vw;
+  right: 16px;
+  top: 16px;
+  width: 12px;
 }
 
 .popup-menu__title {
