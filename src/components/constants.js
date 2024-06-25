@@ -9,7 +9,8 @@ export const TEXTS = {
   subscribe_subtitle: 'FOR OUR NEWLETTER AND PROMOTION',
   enter_email: 'Enter Your Email',
   subscribe: 'Subscribe',
-  copyright: '© 2024  Brand  All Rights Reserved.'
+  copyright: '© 2024  Brand  All Rights Reserved.',
+  popupMenuTitle: 'MENU'
 }
 
 export const SECTIONS = [
@@ -82,3 +83,84 @@ export const CAPABILITIES = {
     subtitle: 'Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.'
   }
 }
+
+export const POPUP_MENU = [
+  {
+    title: 'MAN',
+    path: 'catalog',
+    submenu: [
+      {
+        title: 'Accessories',
+        path: 'catalog'
+      },
+      {
+        title: 'Bags',
+        path: 'catalog'
+      },
+      {
+        title: 'Denim',
+        path: 'catalog'
+      },
+      {
+        title: 'T-Shirts',
+        path: 'catalog'
+      }
+    ]
+  },
+  {
+    title: 'WOMAN',
+    path: 'catalog',
+    submenu: [
+      {
+        title: 'Accessories',
+        path: 'catalog'
+      },
+      {
+        title: 'Jackets & Coats',
+        path: 'catalog'
+      },
+      {
+        title: 'Polos',
+        path: 'catalog'
+      },
+      {
+        title: 'T-Shirts',
+        path: 'catalog'
+      },
+      {
+        title: 'Shirts',
+        path: 'catalog'
+      }
+    ]
+  },
+  {
+    title: 'KIDS',
+    path: 'catalog',
+    submenu: [
+      {
+        title: 'Accessories',
+        path: 'catalog'
+      },
+      {
+        title: 'Jackets & Coats',
+        path: 'catalog'
+      },
+      {
+        title: 'Polos',
+        path: 'catalog'
+      },
+      {
+        title: 'T-Shirts',
+        path: 'catalog'
+      },
+      {
+        title: 'Shirts',
+        path: 'catalog'
+      },
+      {
+        title: 'Bags',
+        path: 'catalog'
+      }
+    ]
+  }
+]
