@@ -62,6 +62,7 @@ input {
 // ------------------ Header ---------------------
 
 .header {
+  position: relative;
   background-color: var(--BLACK);
 }
 
@@ -138,6 +139,50 @@ input {
     width: 32px;
     margin-left: 42px;
   }
+}
+
+.header__popup-menu {
+  position: absolute;
+  right: 0;
+  top: 19.76vw;
+  background-color: var(--WHITE);
+  z-index: 5;
+}
+
+// ------------------ Popup menu -----------------
+
+.popup-menu {
+  padding: 34px;
+  width: 232px;
+}
+
+.popup-menu__close {
+  position: absolute;
+  right: 4.27vw;
+  top: 4.27vw;
+  width: 3.2vw;
+}
+
+.popup-menu__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--BLACK);
+}
+
+.popup-menu__menu-item {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--STRAWBERRY_PINK);
+}
+
+.popup-menu__submenu {
+  padding-left: 11px;
+}
+
+.popup-menu__submenu-item {
+  margin-top: 11px;
+  font-size: 14px;
+  color: var(--WELDED_IRON);
 }
 
 // ------------------ Footer ---------------------
