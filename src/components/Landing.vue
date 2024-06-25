@@ -37,7 +37,7 @@
     <section class="banner">
       <div class="banner__left">
         <img
-          src="/img/banner_man.png"
+          src="img/banner_man.png"
           class="banner__left-img"
           alt="banner"
         >
