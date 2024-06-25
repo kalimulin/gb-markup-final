@@ -310,11 +310,19 @@ $sections: women, men, kids, accesories;
   @include portrait {
     padding-bottom: 25.6vw;
   }
+
+  @include portrait-tablet {
+    padding-bottom: 8.4vw;
+  }
 }
 
 .featured__title {
   @include portrait {
     font-size: 8vw;
+  }
+
+  @include portrait-tablet {
+    font-size: 3.9vw;
   }
 }
 
@@ -324,11 +332,23 @@ $sections: women, men, kids, accesories;
   @include portrait {
     font-size: 3.74vw;
   }
+
+  @include portrait-tablet {
+    font-size: 1.83vw;
+  }
 }
 
 .featured__items {
   @include portrait {
     margin-top: 17.3vw;
+  }
+
+  @include portrait-tablet {
+    margin-top: 9.38vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2.09vw;
   }
 }
 
@@ -341,9 +361,18 @@ $sections: women, men, kids, accesories;
     padding-bottom: 5.07vw;
   }
 
+  @include portrait-tablet {
+    padding-bottom: 5.07vw;
+    flex-basis: 46.88vw;
+  }
+
   & + & {
     @include portrait {
       margin-top: 4.27vw;
+    }
+
+    @include portrait-tablet {
+      margin-top: unset;
     }
   }
 }
@@ -351,6 +380,10 @@ $sections: women, men, kids, accesories;
 .featured__item-text {
   @include portrait {
     padding: 0 4.27vw;
+  }
+
+  @include portrait-tablet {
+    padding: 0 2.09vw;
   }
 }
 
@@ -362,6 +395,11 @@ $sections: women, men, kids, accesories;
     margin-top: 6.7vw;
     font-size: 3.47vw;
   }
+
+  @include portrait-tablet {
+    margin-top: 3.26vw;
+    font-size: 1.7vw;
+  }
 }
 
 .featured__item-desc {
@@ -371,6 +409,11 @@ $sections: women, men, kids, accesories;
     margin-top: 3.2vw;
     font-size: 3.75vw;
   }
+
+  @include portrait-tablet {
+    margin-top: 1.64vw;
+    font-size: 1.83vw;
+  }
 }
 
 .featured__item-price {
@@ -378,6 +421,11 @@ $sections: women, men, kids, accesories;
 
   @include portrait {
     margin-top: 4.8vw;
+  }
+
+  @include portrait-tablet {
+    margin-top: 2.35vw;
+    font-size: 2.09vw;
   }
 }
 
@@ -394,6 +442,14 @@ $sections: women, men, kids, accesories;
     width: 57.07vw;
     height: 13.34vw;
   }
+
+  @include portrait-tablet {
+    margin: 4.17vw auto 0;
+    width: 27.87vw;
+    height: 6.52vw;
+    font-size: 2.09vw;
+    border-width: .15vw;
+  }
 }
 
 // ------------------ Capabilities ---------------------
@@ -404,6 +460,10 @@ $sections: women, men, kids, accesories;
 
   @include portrait {
     padding: 15vw 0 25.3vw;
+  }
+
+  @include portrait-tablet {
+    padding: 6.25vw 0 8.34vw;
   }
 }
 
@@ -419,6 +479,10 @@ $sections: women, men, kids, accesories;
     @include portrait {
       margin-top: 14.5vw;
     }
+
+    @include portrait-tablet {
+      margin-top: 6.25vw;
+    }
   }
 }
 
@@ -426,12 +490,21 @@ $sections: women, men, kids, accesories;
   @include portrait {
     width: 10vw;
   }
+
+  @include portrait-tablet {
+    width: 5vw;
+  }
 }
 
 .capabilities__item-title {
   @include portrait {
     margin-top: 6.5vw;
     font-size: 6vw;
+  }
+
+  @include portrait-tablet {
+    margin-top: 3.65vw;
+    font-size: 2.48vw;
   }
 }
 
@@ -443,6 +516,12 @@ $sections: women, men, kids, accesories;
     margin-top: 4.5vw;
     font-size: 4.3vw;
   }
+
+  @include portrait-tablet {
+    margin-top: 2.09vw;
+    font-size: 1.83vw;
+    max-width: 41vw;
+  }
 }
 
 // ------------------ Review ---------------------
@@ -451,12 +530,18 @@ $sections: women, men, kids, accesories;
   color: var(--VERIFIED_BLACK);
   text-align: center;
   line-height: 1 ;
-  background-image: url("@/assets/img/subscribe-bg.png");
   background-size: cover;
   background-position: center bottom;
 
   @include portrait {
     padding: 20vw 0 34vw;
+    background-image: url("@/assets/img/subscribe-bg.png");
+  }
+
+  @include portrait-tablet {
+    padding: 8.34vw 0 18.23vw;
+    background-image: url("@/assets/img/subscribe-bg-tablet.png");
+    background-position: center;
   }
 }
 
@@ -465,6 +550,10 @@ $sections: women, men, kids, accesories;
 
   @include portrait {
     width: 20vw;
+  }
+
+  @include portrait-tablet {
+    width: 12.5vw;
   }
 }
 
@@ -475,6 +564,12 @@ $sections: women, men, kids, accesories;
     margin-top: 9vw;
     font-size: 5.6vw;
   }
+
+  @include portrait-tablet {
+    margin: 3.91vw auto 0;
+    font-size: 2.61vw;
+    max-width: 50vw;
+  }
 }
 
 // ------------------ Subscribe ---------------------
@@ -483,16 +578,34 @@ $sections: women, men, kids, accesories;
   @include portrait {
     margin-top: 18.5vw;
   }
+
+  @include portrait-tablet {
+    margin-top: 9.5vw;
+  }
 }
 
 .subscribe__title {
   font-weight: 700;
-  font-size: 7.5vw;
+
+  @include portrait {
+    font-size: 7.5vw;
+  }
+
+  @include portrait-tablet {
+    font-size: 3.13vw;
+  }
 }
 
 .subscribe__subtitle {
   margin-top: 1vw;
-  font-size: 4.4vw;
+
+  @include portrait {
+    font-size: 4.4vw;
+  }
+
+  @include portrait-tablet {
+    font-size: 2.35vw;
+  }
 }
 
 .subscribe__email {
@@ -503,6 +616,14 @@ $sections: women, men, kids, accesories;
     height: 15vw;
     font-size: 4.4vw;
     line-height: 15vw;
+  }
+
+  @include portrait-tablet {
+    margin: 7vw auto 0;
+    font-size: 1.83vw;
+    width: 46.36vw;
+    height: 6.39vw;
+    line-height: 6.39vw;
   }
 }
 
@@ -515,6 +636,11 @@ $sections: women, men, kids, accesories;
     padding-left: 5vw;
     border-radius: 7.5vw 0 0 7.5vw;
   }
+
+  @include portrait-tablet {
+    padding-left: 2.5vw;
+    border-radius: 3.2vw 0 0 3.2vw;
+  }
 }
 
 .subscribe__email-submit {
@@ -526,6 +652,10 @@ $sections: women, men, kids, accesories;
     width: 40vw;
     border-radius: 0 7.5vw 7.5vw 0;
     color: var(--WHITE);
+  }
+
+  @include portrait-tablet {
+    width: 25vw;
   }
 }
 
@@ -541,6 +671,12 @@ $sections: women, men, kids, accesories;
   @include portrait {
     padding: 13.4vw 0 3vw;
   }
+
+  @include portrait-tablet {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 3.13vw 4.17vw;
+  }
 }
 
 .footer__socials {
@@ -549,6 +685,10 @@ $sections: women, men, kids, accesories;
 
   @include portrait {
     gap: 2.5vw;
+  }
+
+  @include portrait-tablet {
+    gap: 0.92vw;
   }
 }
 
@@ -562,12 +702,22 @@ $sections: women, men, kids, accesories;
     width: 10vw;
     height: 10vw;
   }
+
+  @include portrait-tablet {
+    width: 4.17vw;
+    height: 4.17vw;
+  }
 }
 
 .footer__social-img {
+  width: auto;
+
   @include portrait {
     height: 5vw;
-    width: auto;
+  }
+
+  @include portrait-tablet {
+    height: 2vw;
   }
 }
 
@@ -575,5 +725,10 @@ $sections: women, men, kids, accesories;
   @include portrait {
     margin-top: 12.4vw;
     font-size: 5vw;
+  }
+
+  @include portrait-tablet {
+    margin-top: unset;
+    font-size: 2.09vw;
   }
 }
