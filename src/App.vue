@@ -66,6 +66,7 @@
                   v-for="({ title, path }, number) in submenu"
                   :key="number"
                   class="popup-menu__submenu-item"
+                  @click="openMenu = false"
                 >
                   <router-link :to="path" >{{ title }}</router-link>
                 </li>

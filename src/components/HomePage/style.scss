@@ -3,7 +3,7 @@
 // ------------------ Banner ---------------------
 
 .banner {
-  height: 96.8vw;
+  height: 363px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@
   @include tablet {
     justify-content: space-between;
     align-items: stretch;
-    height: 47vw;
+    height: 369px;
   }
 
   @include desktop {
@@ -47,12 +47,11 @@
 
 .banner__text-block {
   position: relative;
-  padding-left: 7.47vw;
+  padding-left: 28px;
   line-height: 1.1;
 
   @include tablet {
     align-self: center;
-    padding-left: 3.65vw;
     margin-right: 4.3vw;
     line-height: 1.35;
   }
@@ -66,29 +65,21 @@
 
   &::before {
     content: "";
-    width: 3.2vw;
+    width: 12px;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     background-color: var(--STRAWBERRY_PINK);
-
-    @include tablet {
-      width: 1.57vw;
-    }
-
-    @include desktop {
-      width: 12px;
-    }
   }
 }
 
 .banner__title {
-  font-size: 10.2vw;
+  font-size: 38px;
   font-weight: 900;
 
   @include tablet {
-    font-size: 5.74vw;
+    font-size: 44px;
   }
 
   @include desktop {
@@ -97,11 +88,11 @@
 }
 
 .banner__subtitle {
-  font-size: 5.34vw;
+  font-size: 20px;
   font-weight: 700;
 
   @include tablet {
-    font-size: 3.13vw;
+    font-size: 24px;
   }
 
   @include desktop {
@@ -116,14 +107,14 @@
 // ------------------ Sections ---------------------
 
 .sections {
-  padding: 17.07vw 0;
+  padding: 64px 0;
 
   @include tablet {
-    padding: 8.47vw 0 14.2vw;
+    padding: 20px 0 154px;
   }
 
   @include desktop {
-    padding: 65px 0 96px;
+    padding: 64px 0 96px;
   }
 
   & > .container {
@@ -139,7 +130,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65.87vw;
+  aspect-ratio: 343/247;
   background-size: cover;
   background-position: center;
 
@@ -154,7 +145,7 @@
   }
 
   & + & {
-    margin-top: 8.54vw;
+    margin-top: 32px;
 
     @include tablet {
       margin-top: unset;
@@ -163,7 +154,7 @@
 }
 
 .section:last-child {
-  height: 29.6vw;
+  aspect-ratio: 343/111;
 
   @include tablet {
     width: 100%;
@@ -194,30 +185,14 @@ $sections: women, men, kids, accesories;
 }
 
 .section__text1 {
-  font-size: 4.27vw;
+  font-size: 16px;
   color: var(--WHITE);
-
-  @include tablet {
-    font-size: 2.09vw;
-  }
-
-  @include desktop {
-    font-size: 16px;
-  }
 }
 
 .section__text2 {
-  font-size: 6.4vw;
+  font-size: 24px;
   font-weight: 700;
   color: var(--STRAWBERRY_PINK);
-
-  @include tablet {
-    font-size: 3.13vw;
-  }
-
-  @include desktop {
-    font-size: 24px;
-  }
 }
 
 // ------------------ Featured ---------------------
@@ -233,6 +208,31 @@ $sections: women, men, kids, accesories;
 
   @include desktop {
     padding-bottom: 95px;
+  }
+}
+
+.featured__title {
+  font-size: 8vw;
+
+  @include tablet {
+    font-size: 3.9vw;
+  }
+
+  @include desktop {
+    font-size: 30px;
+  }
+}
+
+.featured__subtitle {
+  font-size: 3.74vw;
+  color: var(--COLD_GREY);
+
+  @include tablet {
+    font-size: 1.83vw;
+  }
+
+  @include desktop {
+    font-size: 14px;
   }
 }
 

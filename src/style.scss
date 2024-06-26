@@ -39,10 +39,10 @@ input {
 .container {
   width: 100%;
   margin: 0 auto;
-  max-width: 91vw;
+  max-width: 343px;
 
   @include tablet {
-    max-width: 95.84vw;
+    max-width: 736px;
   }
 
   @include desktop {
@@ -51,16 +51,8 @@ input {
 }
 
 .landing__header {
-  height: 19.76vw;
+  height: 74px;
   display: flex;
-
-  @include tablet {
-    height: 9.63vw;
-  }
-
-  @include desktop {
-    height: 75px;
-  }
 }
 
 // ------------------ Header ---------------------
@@ -68,6 +60,11 @@ input {
 .header {
   position: relative;
   background-color: var(--BLACK);
+
+  img {
+    height: 100%;
+    width: auto;
+  }
 }
 
 .header__wrap {
@@ -77,90 +74,53 @@ input {
 }
 
 .header__logo {
-  width: 11.76vw;
+  height: 38px;
 
-  @include tablet {
-    width: 4.27vw;
-  }
-
-  @include desktop {
-    width: 44px;
+  a {
+    display: block;
   }
 }
 
 .header__search {
-  width: 6.96vw;
-  margin-left: 10vw;
+  height: 26px;
+  margin-top: 12px;
+  margin-left: 41px;
   margin-right: auto;
   cursor: pointer;
-
-  @include tablet {
-    width: 2.8vw;
-    padding-top: 1vw;
-    margin-left: 5.34vw;
-  }
-
-  @include desktop {
-    width: 26px;
-    padding-top: 9px;
-    margin-left: 41px;
-  }
 }
 
 .header__menu {
   cursor: pointer;
-
-  @include desktop {
-    width: 32px;
-  }
+  height: 23px;
 }
 
 .header__user {
-  display: none;
+  display: block;
+  margin-left: 25px;
+  height: 29px;
   cursor: pointer;
 
-  @include tablet {
-    display: block;
-    margin-left: 3.26vw;
-    width: 2vw;
-  }
-
-  @include desktop {
-    margin-left: 25px ;
-    width: 29px;
+  @include mobile-only {
+    display: none;
   }
 }
 
 .header__cart {
-  display: none;
   cursor: pointer;
+  height: 29px;
+  margin-left: 42px;
 
-  @include tablet {
-    display: block;
-    margin-left: 5.5vw;
-    width: 2.6vw;
-  }
-
-  @include desktop {
-    width: 32px;
-    margin-left: 42px;
+  @include mobile-only {
+    display: none;
   }
 }
 
 .header__popup-menu {
   position: absolute;
   right: 0;
-  top: 19.76vw;
+  top: 75px;
   background-color: var(--WHITE);
   z-index: 5;
-
-  @include tablet {
-    top: 9.63vw;
-  }
-
-  @include desktop {
-    top: 75px;
-  }
 }
 
 // ------------------ Popup menu -----------------
@@ -204,15 +164,11 @@ input {
 // ------------------ Footer ---------------------
 
 .footer {
-  padding: 13.4vw 0 3vw;
+  padding: 43px 0 9px;
   color: var(--WHITEOUT);
   background-color: var(--VERIFIED_BLACK);
 
   @include tablet {
-    padding: 3.13vw 4.17vw;
-  }
-
-  @include desktop {
     padding: 24px 0;
   }
 
@@ -231,55 +187,28 @@ input {
 .footer__socials {
   display: flex;
   justify-content: center;
-  gap: 2.5vw;
-
-  @include tablet {
-    gap: 0.92vw;
-  }
+  gap: 7px;
 }
 
 .footer__social {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10vw;
-  height: 10vw;
+  width: 32px;
+  height: 32px;
   background-color: var(--WHITE);
-
-  @include tablet {
-    width: 4.17vw;
-    height: 4.17vw;
-  }
-
-  @include desktop {
-    width: 32px;
-    height: 32px;
-  }
 }
 
 .footer__social-img {
   width: auto;
-  height: 5vw;
-
-  @include tablet {
-    height: 2vw;
-  }
-
-  @include desktop {
-    height: 16px;
-  }
+  height: 18px;
 }
 
 .footer__copyright {
-  margin-top: 12.4vw;
-  font-size: 5vw;
+  margin-top: 40px;
+  font-size: 16px;
 
   @include tablet {
     margin-top: unset;
-    font-size: 2.09vw;
-  }
-
-  @include desktop {
-    font-size: 16px;
   }
 }

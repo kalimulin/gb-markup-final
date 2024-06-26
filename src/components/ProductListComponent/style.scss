@@ -1,30 +1,5 @@
 @import "@/assets/scss/mixins";
 
-.product-list__title {
-  font-size: 8vw;
-
-  @include tablet {
-    font-size: 3.9vw;
-  }
-
-  @include desktop {
-    font-size: 30px;
-  }
-}
-
-.product-list__subtitle {
-  font-size: 3.74vw;
-  color: var(--COLD_GREY);
-
-  @include tablet {
-    font-size: 1.83vw;
-  }
-
-  @include desktop {
-    font-size: 14px;
-  }
-}
-
 .product-list__items {
   margin-top: 17.3vw;
 
