@@ -3,10 +3,12 @@
     <header class="landing__header header">
       <div class="container header__wrap">
         <div class="header__logo">
-          <img
-            src="@/assets/img/logo.png"
-            alt="logo"
-          >
+          <router-link to="/">
+            <img
+              src="@/assets/img/logo.png"
+              alt="logo"
+            >
+          </router-link>
         </div>
         <div class="header__search">
           <img
