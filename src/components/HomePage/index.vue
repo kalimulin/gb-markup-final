@@ -32,19 +32,8 @@
       <div class="container">
         <div class="featured__title">{{ TEXTS.featured_title }}</div>
         <div class="featured__subtitle">{{ TEXTS.featured_subtitle }}</div>
-        <div class="featured__items">
-          <div
-            v-for="({title, desc, price}, number) in FEATURED_ITEMS"
-            :key="number"
-            class="featured__item"
-          >
-            <img :src="`img/featured/${number+1}.jpg`" alt="featured" >
-            <div class="featured__item-text">
-              <div class="featured__item-title">{{ title }}</div>
-              <div class="featured__item-desc">{{ desc }}</div>
-              <div class="featured__item-price">{{ price }}</div>
-            </div>
-          </div>
+        <div class="featured__product-list">
+          <product-list :product-list="FEATURED_ITEMS" />
         </div>
         <div class="featured__browse-all">
           <span>{{ TEXTS.browse_all }}</span>
@@ -111,9 +100,11 @@
 
 <script>
 import { CAPABILITIES, FEATURED_ITEMS, SECTIONS, TEXTS } from '@/components/constants'
+import ProductList from '@/components/ProductListComponent/index.vue'
 
 export default {
   name: 'HomeView',
+  components: { ProductList },
   created () {
     this.TEXTS = TEXTS
     this.SECTIONS = SECTIONS

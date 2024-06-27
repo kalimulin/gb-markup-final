@@ -3,7 +3,7 @@
 // ------------------ Banner ---------------------
 
 .banner {
-  height: 96.8vw;
+  height: 363px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@
   @include tablet {
     justify-content: space-between;
     align-items: stretch;
-    height: 47vw;
+    height: 369px;
   }
 
   @include desktop {
@@ -27,7 +27,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    flex-grow: 1;
+    flex-basis: 50%;
+    flex-grow: 0;
   }
 
   @include desktop {
@@ -47,13 +48,12 @@
 
 .banner__text-block {
   position: relative;
-  padding-left: 7.47vw;
+  padding-left: 28px;
   line-height: 1.1;
 
   @include tablet {
     align-self: center;
-    padding-left: 3.65vw;
-    margin-right: 4.3vw;
+    margin: 0 auto;
     line-height: 1.35;
   }
 
@@ -66,29 +66,21 @@
 
   &::before {
     content: "";
-    width: 3.2vw;
+    width: 12px;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     background-color: var(--STRAWBERRY_PINK);
-
-    @include tablet {
-      width: 1.57vw;
-    }
-
-    @include desktop {
-      width: 12px;
-    }
   }
 }
 
 .banner__title {
-  font-size: 10.2vw;
+  font-size: 38px;
   font-weight: 900;
 
   @include tablet {
-    font-size: 5.74vw;
+    font-size: 44px;
   }
 
   @include desktop {
@@ -97,11 +89,11 @@
 }
 
 .banner__subtitle {
-  font-size: 5.34vw;
+  font-size: 20px;
   font-weight: 700;
 
   @include tablet {
-    font-size: 3.13vw;
+    font-size: 24px;
   }
 
   @include desktop {
@@ -116,14 +108,14 @@
 // ------------------ Sections ---------------------
 
 .sections {
-  padding: 17.07vw 0;
+  padding: 64px 0;
 
   @include tablet {
-    padding: 8.47vw 0 14.2vw;
+    padding: 20px 0 154px;
   }
 
   @include desktop {
-    padding: 65px 0 96px;
+    padding: 64px 0 96px;
   }
 
   & > .container {
@@ -139,13 +131,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65.87vw;
+  aspect-ratio: 343/247;
   background-size: cover;
   background-position: center;
 
   @include tablet {
-    width: 30.2vw;
-    height: 24.35vw;
+    width: 232px;
+    height: 167px;
   }
 
   @include desktop {
@@ -154,7 +146,7 @@
   }
 
   & + & {
-    margin-top: 8.54vw;
+    margin-top: 32px;
 
     @include tablet {
       margin-top: unset;
@@ -163,12 +155,12 @@
 }
 
 .section:last-child {
-  height: 29.6vw;
+  aspect-ratio: 343/111;
 
   @include tablet {
+    margin-top: 19px;
     width: 100%;
-    height: 15.1vw;
-    margin-top: 2.35vw;
+    height: 116px;
   }
 
   @include desktop {
@@ -194,41 +186,25 @@ $sections: women, men, kids, accesories;
 }
 
 .section__text1 {
-  font-size: 4.27vw;
+  font-size: 16px;
   color: var(--WHITE);
-
-  @include tablet {
-    font-size: 2.09vw;
-  }
-
-  @include desktop {
-    font-size: 16px;
-  }
 }
 
 .section__text2 {
-  font-size: 6.4vw;
+  font-size: 24px;
   font-weight: 700;
   color: var(--STRAWBERRY_PINK);
-
-  @include tablet {
-    font-size: 3.13vw;
-  }
-
-  @include desktop {
-    font-size: 24px;
-  }
 }
 
 // ------------------ Featured ---------------------
 
 .featured {
-  padding-bottom: 25.6vw;
+  padding-bottom: 96px;
   text-align: center;
   line-height: 1.4;
 
   @include tablet {
-    padding-bottom: 8.4vw;
+    padding-bottom: 64px;
   }
 
   @include desktop {
@@ -237,168 +213,51 @@ $sections: women, men, kids, accesories;
 }
 
 .featured__title {
-  font-size: 8vw;
-
-  @include tablet {
-    font-size: 3.9vw;
-  }
-
-  @include desktop {
-    font-size: 30px;
-  }
+  font-size: 30px;
 }
 
 .featured__subtitle {
-  font-size: 3.74vw;
+  font-size: 14px;
   color: var(--COLD_GREY);
-
-  @include tablet {
-    font-size: 1.83vw;
-  }
-
-  @include desktop {
-    font-size: 14px;
-  }
 }
 
-.featured__items {
-  margin-top: 17.3vw;
+.featured__product-list {
+  margin-top: 64px;
 
   @include tablet {
-    margin-top: 9.38vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 2.09vw;
-  }
-
-  @include desktop {
-    margin-top: 48px;
-    row-gap: 30px;
-  }
-}
-
-.featured__item {
-  padding-bottom: 5.07vw;
-  text-align: left;
-  background-color: var(--PEARL);
-  cursor: pointer;
-
-  @include tablet {
-    padding-bottom: 5.07vw;
-    flex-basis: 46.88vw;
-  }
-
-  @include desktop {
-    padding-bottom: 20px;
-    flex-basis: 360px;
-  }
-
-  & + & {
-    margin-top: 4.27vw;
-
-    @include tablet {
-      margin-top: unset;
-    }
-  }
-}
-
-.featured__item-text {
-  padding: 0 4.27vw;
-
-  @include tablet {
-    padding: 0 2.09vw;
-  }
-
-  @include desktop {
-    padding: 0 16px;
-  }
-}
-
-.featured__item-title {
-  margin-top: 6.7vw;
-  font-size: 3.47vw;
-  color: var(--BLACK);
-  text-transform: uppercase;
-
-  @include tablet {
-    margin-top: 3.26vw;
-    font-size: 1.7vw;
-  }
-
-  @include desktop {
-    margin-top: 24px;
-    font-size: 13px;
-  }
-}
-
-.featured__item-desc {
-  margin-top: 3.2vw;
-  font-size: 3.75vw;
-  color: var(--KNIGHTS_ARMOR);
-
-  @include tablet {
-    margin-top: 1.64vw;
-    font-size: 1.83vw;
-  }
-
-  @include desktop {
-    margin-top: 16px;
-    font-size: 14px;
-  }
-}
-
-.featured__item-price {
-  margin-top: 4.8vw;
-  color: var(--STRAWBERRY_PINK);
-
-  @include tablet {
-    margin-top: 2.35vw;
-    font-size: 2.09vw;
-  }
-
-  @include desktop {
-    margin-top: 16px;
-    font-size: 16px;
+    margin-top: 72px;
   }
 }
 
 .featured__browse-all {
-  margin: 10.67vw auto 0;
+  margin: 40px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 57.07vw;
-  height: 13.34vw;
-  border: .5vw solid var(--POMPELMO);
+  width: 212px;
+  height: 48px;
+  border: 1px solid var(--POMPELMO);
   color: var(--PONCEAU);
-  font-size: 4.27vw;
+  font-size: 16px;
 
   @include tablet {
-    margin: 4.17vw auto 0;
-    width: 27.87vw;
-    height: 6.52vw;
-    font-size: 2.09vw;
-    border-width: .15vw;
+    margin-top: 32px;
   }
 
   @include desktop {
-    width: 212px;
-    height: 48px;
-    font-size: 16px;
-    line-height: 48px;
+    margin-top: 48px;
   }
 }
 
 // ------------------ Capabilities ---------------------
 
 .capabilities {
-  padding: 15vw 0 25.3vw;
+  padding: 48px 0 80px;
   background-color: var(--VERIFIED_BLACK);
   color: var(--WHITEOUT);
 
   @include tablet {
-    padding: 6.25vw 0 8.34vw;
+    padding: 48px 0 64px;
   }
 
   @include desktop {
@@ -429,10 +288,10 @@ $sections: women, men, kids, accesories;
   }
 
   & + & {
-    margin-top: 14.5vw;
+    margin-top: 47px;
 
     @include tablet {
-      margin-top: 6.25vw;
+      margin-top: 48px;
     }
 
     @include desktop {
@@ -442,24 +301,16 @@ $sections: women, men, kids, accesories;
 }
 
 .capabilities__item-icon {
-  width: 10vw;
-
-  @include tablet {
-    width: 5vw;
-  }
-
-  @include desktop {
-    width: 40px;
-  }
+  width: 38px;
 }
 
 .capabilities__item-title {
-  margin-top: 6.5vw;
-  font-size: 6vw;
+  margin-top: 28px;
+  font-size: 20px;
 
   @include tablet {
-    margin-top: 3.65vw;
-    font-size: 2.48vw;
+    margin-top: 20px;
+    font-size: 20px;
   }
 
   @include desktop {
@@ -470,14 +321,15 @@ $sections: women, men, kids, accesories;
 
 
 .capabilities__item-subtitle {
-  margin-top: 4.5vw;
-  font-size: 4.3vw;
+  margin-top: 14px;
+  padding: 0 15px;
+  font-size: 14px;
   font-weight: 300;
 
   @include tablet {
-    margin-top: 2.09vw;
-    font-size: 1.83vw;
-    max-width: 41vw;
+    margin-top: 16px;
+    font-size: 14px;
+    max-width: 340px;
   }
 
   @include desktop {
@@ -489,7 +341,7 @@ $sections: women, men, kids, accesories;
 // ------------------ Review ---------------------
 
 .review {
-  padding: 20vw 0 34vw;
+  padding: 64px 0 110px;
   color: var(--VERIFIED_BLACK);
   text-align: center;
   line-height: 1 ;
@@ -501,7 +353,7 @@ $sections: women, men, kids, accesories;
   }
 
   @include tablet {
-    padding: 8.34vw 0 18.23vw;
+    padding: 64px 0 140px;
     background-position: center;
   }
 
@@ -525,42 +377,26 @@ $sections: women, men, kids, accesories;
 
 .review__ava {
   margin: 0 auto;
-  width: 20vw;
-
-  @include tablet {
-    width: 12.5vw;
-  }
-
-  @include desktop {
-    width: 96px;
-  }
+  width: 96px;
 }
 
 .review__text {
-  margin-top: 9vw;
-  font-size: 5.6vw;
+  margin: 30px auto 0;
+  font-size: 20px;
   font-style: italic;
 
   @include tablet {
-    margin: 3.91vw auto 0;
-    font-size: 2.61vw;
-    max-width: 50vw;
-  }
-
-  @include desktop {
-    margin-top: 30px;
     max-width: 360px;
-    font-size: 20px;
   }
 }
 
 // ------------------ Subscribe ---------------------
 
 .subscribe {
-  margin-top: 18.5vw;
+  margin-top: 59px;
 
   @include tablet {
-    margin-top: 9.5vw;
+    margin-top: 56px;
   }
 
   @include desktop {
@@ -570,87 +406,58 @@ $sections: women, men, kids, accesories;
 }
 
 .subscribe__title {
-  font-size: 7.5vw;
+  font-size: 24px;
   font-weight: 700;
-
-  @include tablet {
-    font-size: 3.13vw;
-  }
-
-  @include desktop {
-    font-size: 24px;
-  }
 }
 
 .subscribe__subtitle {
-  font-size: 4.4vw;
-  margin-top: 1vw;
+  font-size: 14px;
+  margin-top: 4px;
 
   @include tablet {
-    font-size: 2.35vw;
+    font-size: 18px;
   }
 
   @include desktop {
     margin-top: 8px;
-    font-size: 18px;
   }
 }
 
 .subscribe__email {
-  margin-top: 7vw;
+  margin-top: 22px;
   display: flex;
-  height: 15vw;
-  font-size: 4.4vw;
-  line-height: 15vw;
+  height: 48px;
+  font-size: 14px;
+  line-height: 48px;
 
   @include tablet {
-    margin: 7vw auto 0;
-    font-size: 1.83vw;
-    width: 46.36vw;
-    height: 6.39vw;
-    line-height: 6.39vw;
+    margin: 27px auto 0;
+    width: 356px;
   }
 
   @include desktop {
     margin-top: 32px;
     width: 356px;
-    height: 49px;
     font-size: 14px;
-    line-height: 49px;
   }
 }
 
 .subscribe__email-field {
-  width: 61vw;
-  padding-left: 5vw;
-  border-radius: 7.5vw 0 0 7.5vw;
+  padding-left: 24px;
+  border-radius: 24px 0 0 24px;
   background-color: var(--JUPITER);
   flex-grow: 1;
-
-  @include tablet {
-    padding-left: 2.5vw;
-    border-radius: 3.2vw 0 0 3.2vw;
-  }
-
-  @include desktop {
-    width: auto;
-    padding-left: 20px;
-  }
 }
 
 .subscribe__email-submit {
-  width: 40vw;
+  width: 95px;
   flex-shrink: 1;
   background-color: var(--STRAWBERRY_PINK);
-  border-radius: 0 7.5vw 7.5vw 0;
+  border-radius: 0 24px 24px 0;
   color: var(--WHITE);
   cursor: pointer;
 
   @include tablet {
-    width: 25vw;
-  }
-
-  @include desktop {
     width: 100px;
   }
 }
