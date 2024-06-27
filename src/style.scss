@@ -43,6 +43,7 @@ input {
   max-width: 480px;
 
   @include tablet {
+    padding: 0;
     max-width: 736px;
   }
 
@@ -54,110 +55,4 @@ input {
 .landing__header {
   height: 74px;
   display: flex;
-}
-
-// ------------------ Header ---------------------
-
-.header {
-  position: relative;
-  background-color: var(--BLACK);
-
-  img {
-    height: 100%;
-    width: auto;
-  }
-}
-
-.header__wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__logo {
-  height: 38px;
-
-  a {
-    display: block;
-  }
-}
-
-.header__search {
-  height: 26px;
-  margin-top: 12px;
-  margin-left: 41px;
-  margin-right: auto;
-  cursor: pointer;
-}
-
-.header__menu {
-  cursor: pointer;
-  height: 23px;
-}
-
-.header__user {
-  display: block;
-  margin-left: 25px;
-  height: 29px;
-  cursor: pointer;
-
-  @include mobile-only {
-    display: none;
-  }
-}
-
-.header__cart {
-  cursor: pointer;
-  height: 29px;
-  margin-left: 42px;
-
-  @include mobile-only {
-    display: none;
-  }
-}
-
-.header__popup-menu {
-  position: absolute;
-  right: 0;
-  top: 75px;
-  background-color: var(--WHITE);
-  z-index: 5;
-}
-
-// ------------------ Popup menu -----------------
-
-.popup-menu {
-  padding: 34px;
-  width: 232px;
-  box-shadow: 6px 4px 35px 0 var(--BLACK_021);
-}
-
-.popup-menu__close {
-  position: absolute;
-  right: 16px;
-  top: 16px;
-  width: 12px;
-  cursor: pointer;
-}
-
-.popup-menu__title {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--BLACK);
-}
-
-.popup-menu__menu-item {
-  margin-top: 20px;
-  font-size: 14px;
-  color: var(--STRAWBERRY_PINK);
-}
-
-.popup-menu__submenu {
-  padding-left: 11px;
-}
-
-.popup-menu__submenu-item {
-  margin-top: 11px;
-  font-size: 14px;
-  color: var(--WELDED_IRON);
 }

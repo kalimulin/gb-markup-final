@@ -27,7 +27,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    flex-grow: 1;
+    flex-basis: 50%;
+    flex-grow: 0;
   }
 
   @include desktop {
@@ -52,7 +53,7 @@
 
   @include tablet {
     align-self: center;
-    margin-right: 4.3vw;
+    margin: 0 auto;
     line-height: 1.35;
   }
 
@@ -213,69 +214,50 @@ $sections: women, men, kids, accesories;
 
 .featured__title {
   font-size: 30px;
-
-  @include tablet {
-    font-size: 3.9vw;
-  }
-
-  @include desktop {
-    font-size: 30px;
-  }
 }
 
 .featured__subtitle {
   font-size: 14px;
   color: var(--COLD_GREY);
-
-  @include tablet {
-    font-size: 1.83vw;
-  }
-
-  @include desktop {
-    font-size: 14px;
-  }
 }
 
 .featured__product-list {
-  margin-top: 65px;
+  margin-top: 64px;
+
+  @include tablet {
+    margin-top: 72px;
+  }
 }
 
 .featured__browse-all {
-  margin: 40px auto 96px;
+  margin: 40px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 212px;
   height: 48px;
-  border: .5vw solid var(--POMPELMO);
+  border: 1px solid var(--POMPELMO);
   color: var(--PONCEAU);
   font-size: 16px;
 
   @include tablet {
-    margin: 4.17vw auto 0;
-    width: 27.87vw;
-    height: 6.52vw;
-    font-size: 2.09vw;
-    border-width: .15vw;
+    margin-top: 32px;
   }
 
   @include desktop {
-    width: 212px;
-    height: 48px;
-    font-size: 16px;
-    line-height: 48px;
+    margin-top: 48px;
   }
 }
 
 // ------------------ Capabilities ---------------------
 
 .capabilities {
-  padding: 48px 0 81px;
+  padding: 48px 0 80px;
   background-color: var(--VERIFIED_BLACK);
   color: var(--WHITEOUT);
 
   @include tablet {
-    padding: 6.25vw 0 8.34vw;
+    padding: 48px 0 64px;
   }
 
   @include desktop {
@@ -309,7 +291,7 @@ $sections: women, men, kids, accesories;
     margin-top: 47px;
 
     @include tablet {
-      margin-top: 6.25vw;
+      margin-top: 48px;
     }
 
     @include desktop {
@@ -327,8 +309,8 @@ $sections: women, men, kids, accesories;
   font-size: 20px;
 
   @include tablet {
-    margin-top: 3.65vw;
-    font-size: 2.48vw;
+    margin-top: 20px;
+    font-size: 20px;
   }
 
   @include desktop {
@@ -345,9 +327,9 @@ $sections: women, men, kids, accesories;
   font-weight: 300;
 
   @include tablet {
-    margin-top: 2.09vw;
-    font-size: 1.83vw;
-    max-width: 41vw;
+    margin-top: 16px;
+    font-size: 14px;
+    max-width: 340px;
   }
 
   @include desktop {
@@ -371,7 +353,7 @@ $sections: women, men, kids, accesories;
   }
 
   @include tablet {
-    padding: 64px 0 18.23vw;
+    padding: 64px 0 140px;
     background-position: center;
   }
 
@@ -395,32 +377,16 @@ $sections: women, men, kids, accesories;
 
 .review__ava {
   margin: 0 auto;
-  width: 92px;
-
-  @include tablet {
-    width: 12.5vw;
-  }
-
-  @include desktop {
-    width: 96px;
-  }
+  width: 96px;
 }
 
 .review__text {
-  margin-top: 30px;
-  font-size: 18px;
+  margin: 30px auto 0;
+  font-size: 20px;
   font-style: italic;
 
   @include tablet {
-    margin: 3.91vw auto 0;
-    font-size: 2.61vw;
-    max-width: 50vw;
-  }
-
-  @include desktop {
-    margin-top: 30px;
     max-width: 360px;
-    font-size: 20px;
   }
 }
 
@@ -430,7 +396,7 @@ $sections: women, men, kids, accesories;
   margin-top: 59px;
 
   @include tablet {
-    margin-top: 9.5vw;
+    margin-top: 56px;
   }
 
   @include desktop {
@@ -442,14 +408,6 @@ $sections: women, men, kids, accesories;
 .subscribe__title {
   font-size: 24px;
   font-weight: 700;
-
-  @include tablet {
-    font-size: 3.13vw;
-  }
-
-  @include desktop {
-    font-size: 24px;
-  }
 }
 
 .subscribe__subtitle {
@@ -457,12 +415,11 @@ $sections: women, men, kids, accesories;
   margin-top: 4px;
 
   @include tablet {
-    font-size: 2.35vw;
+    font-size: 18px;
   }
 
   @include desktop {
     margin-top: 8px;
-    font-size: 18px;
   }
 }
 
@@ -474,9 +431,8 @@ $sections: women, men, kids, accesories;
   line-height: 48px;
 
   @include tablet {
-    margin: 7vw auto 0;
-    font-size: 1.83vw;
-    width: 46.36vw;
+    margin: 27px auto 0;
+    width: 356px;
   }
 
   @include desktop {
@@ -487,19 +443,10 @@ $sections: women, men, kids, accesories;
 }
 
 .subscribe__email-field {
-  padding-left: 27px;
+  padding-left: 24px;
   border-radius: 24px 0 0 24px;
   background-color: var(--JUPITER);
   flex-grow: 1;
-
-  @include tablet {
-    padding-left: 2.5vw;
-  }
-
-  @include desktop {
-    width: auto;
-    padding-left: 20px;
-  }
 }
 
 .subscribe__email-submit {
@@ -511,10 +458,6 @@ $sections: women, men, kids, accesories;
   cursor: pointer;
 
   @include tablet {
-    width: 25vw;
-  }
-
-  @include desktop {
     width: 100px;
   }
 }
