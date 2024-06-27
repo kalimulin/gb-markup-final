@@ -10,29 +10,34 @@ export const TEXTS = {
   enter_email: 'Enter Your Email',
   subscribe: 'Subscribe',
   copyright: '© 2024  Brand  All Rights Reserved.',
-  popupMenuTitle: 'MENU'
+  popupMenuTitle: 'MENU',
+  addToCart: 'Add to Cart'
 }
 
 export const SECTIONS = [
   {
     str1: '30% OFF',
     str2: 'FOR WOMEN',
-    classSuffix: 'women'
+    classSuffix: 'women',
+    path: '/catalog'
   },
   {
     str1: 'HOT DEAL',
     str2: 'FOR MEN',
-    classSuffix: 'men'
+    classSuffix: 'men',
+    path: '/catalog'
   },
   {
     str1: 'NEW ARRIVALS',
     str2: 'FOR KIDS',
-    classSuffix: 'kids'
+    classSuffix: 'kids',
+    path: '/catalog'
   },
   {
     str1: 'LUXIROUS & TRENDY',
     str2: 'ACCESORIES',
-    classSuffix: 'accesories'
+    classSuffix: 'accesories',
+    path: '/catalog'
   }
 ]
 

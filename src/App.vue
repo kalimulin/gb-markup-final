@@ -2,6 +2,7 @@
   <div class="landing">
     <Header :texts="TEXTS" :popup-menu="POPUP_MENU" />
     <router-view/>
+    <Review />
     <Footer :text-copyright="TEXTS.copyright" />
   </div>
 </template>
@@ -10,10 +11,12 @@
 import { TEXTS, POPUP_MENU } from '@/components/constants'
 import Header from '@/components/HeaderComponent'
 import Footer from '@/components/FooterComponent'
+import Review from '@/components/ReviewComponent/index.vue'
 
 export default {
   name: 'App',
   components: {
+    Review,
     Header,
     Footer
   },

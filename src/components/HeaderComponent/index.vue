@@ -22,18 +22,24 @@
           @click="openMenu = !openMenu"
         >
       </div>
-      <div class="header__user">
+      <router-link
+        to="registration"
+        class="header__user"
+      >
         <img
           src="@/assets/img/icon-user.svg"
           alt="user"
         >
-      </div>
-      <div class="header__cart">
+      </router-link>
+      <router-link
+        to="/cart"
+        class="header__cart"
+      >
         <img
           src="@/assets/img/icon-cart.svg"
           alt="user"
         >
-      </div>
+      </router-link>
       <div
         v-if="openMenu"
         class="header__overlay"
@@ -55,12 +61,15 @@
         <div class="popup-menu__title">{{ texts.popupMenuTitle }}</div>
         <ul class="popup-menu__items">
           <li
-            v-for="({ title, submenu }, number) in popupMenu"
+            v-for="({ title, submenu, path }, number) in popupMenu"
             :key="number"
             class="popup-menu__menu-item"
           >
-            <div class="popup-menu__menu-item-title">
-              {{ title }}
+            <div
+              class="popup-menu__menu-item-title"
+              @click="openMenu = false"
+            >
+              <router-link :to="path">{{ title }}</router-link>
             </div>
             <ul
               v-if="submenu"

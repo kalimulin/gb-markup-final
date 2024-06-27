@@ -1,0 +1,88 @@
+@import "@/assets/scss/mixins";
+
+.capabilities {
+  padding: 48px 0 80px;
+  background-color: var(--VERIFIED_BLACK);
+  color: var(--WHITEOUT);
+
+  @include tablet {
+    padding: 48px 0 64px;
+  }
+
+  @include desktop {
+    padding: 104px 0;
+    gap: 30px;
+  }
+
+  & > .container {
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.capabilities__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+  color: var(--WHITEOUT);
+
+  @include desktop {
+    width: 360px;
+    padding: 0 30px;
+  }
+
+  & + & {
+    margin-top: 47px;
+
+    @include tablet {
+      margin-top: 48px;
+    }
+
+    @include desktop {
+      margin-top: unset;
+    }
+  }
+}
+
+.capabilities__item-icon {
+  width: 38px;
+}
+
+.capabilities__item-title {
+  margin-top: 28px;
+  font-size: 20px;
+
+  @include tablet {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  @include desktop {
+    margin-top: 28px;
+    font-size: 20px;
+  }
+}
+
+
+.capabilities__item-subtitle {
+  margin-top: 14px;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 300;
+
+  @include tablet {
+    margin-top: 16px;
+    font-size: 14px;
+    max-width: 340px;
+  }
+
+  @include desktop {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+}
