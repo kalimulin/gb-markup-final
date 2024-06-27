@@ -1,10 +1,7 @@
 @import "@/assets/scss/mixins";
 
 .product-list__items {
-  margin-top: 17.3vw;
-
   @include tablet {
-    margin-top: 9.38vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -12,13 +9,12 @@
   }
 
   @include desktop {
-    margin-top: 48px;
     row-gap: 30px;
   }
 }
 
 .product-list__item {
-  padding-bottom: 5.07vw;
+  padding-bottom: 20px;
   text-align: left;
   background-color: var(--PEARL);
   cursor: pointer;
@@ -34,7 +30,7 @@
   }
 
   & + & {
-    margin-top: 4.27vw;
+    margin-top: 16px;
 
     @include tablet {
       margin-top: unset;
@@ -43,7 +39,7 @@
 }
 
 .product-list__item-text {
-  padding: 0 4.27vw;
+  padding: 0 16px;
 
   @include tablet {
     padding: 0 2.09vw;
@@ -55,8 +51,8 @@
 }
 
 .product-list__item-title {
-  margin-top: 6.7vw;
-  font-size: 3.47vw;
+  margin-top: 26px;
+  font-size: 13px;
   color: var(--BLACK);
   text-transform: uppercase;
 
@@ -72,8 +68,8 @@
 }
 
 .product-list__item-desc {
-  margin-top: 3.2vw;
-  font-size: 3.75vw;
+  margin-top: 12px;
+  font-size: 14px;
   color: var(--KNIGHTS_ARMOR);
 
   @include tablet {
@@ -88,7 +84,8 @@
 }
 
 .product-list__item-price {
-  margin-top: 4.8vw;
+  margin-top: 18px;
+  font-size: 16px;
   color: var(--STRAWBERRY_PINK);
 
   @include tablet {

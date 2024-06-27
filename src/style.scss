@@ -39,7 +39,8 @@ input {
 .container {
   width: 100%;
   margin: 0 auto;
-  max-width: 343px;
+  padding: 0 16px;
+  max-width: 480px;
 
   @include tablet {
     max-width: 736px;
@@ -159,56 +160,4 @@ input {
   margin-top: 11px;
   font-size: 14px;
   color: var(--WELDED_IRON);
-}
-
-// ------------------ Footer ---------------------
-
-.footer {
-  padding: 43px 0 9px;
-  color: var(--WHITEOUT);
-  background-color: var(--VERIFIED_BLACK);
-
-  @include tablet {
-    padding: 24px 0;
-  }
-
-  & > .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include tablet {
-      flex-direction: row-reverse;
-      justify-content: space-between;
-    }
-  }
-}
-
-.footer__socials {
-  display: flex;
-  justify-content: center;
-  gap: 7px;
-}
-
-.footer__social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32px;
-  height: 32px;
-  background-color: var(--WHITE);
-}
-
-.footer__social-img {
-  width: auto;
-  height: 18px;
-}
-
-.footer__copyright {
-  margin-top: 40px;
-  font-size: 16px;
-
-  @include tablet {
-    margin-top: unset;
-  }
 }

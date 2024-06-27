@@ -32,7 +32,9 @@
       <div class="container">
         <div class="featured__title">{{ TEXTS.featured_title }}</div>
         <div class="featured__subtitle">{{ TEXTS.featured_subtitle }}</div>
-        <product-list :product-list="FEATURED_ITEMS" />
+        <div class="featured__product-list">
+          <product-list :product-list="FEATURED_ITEMS" />
+        </div>
         <div class="featured__browse-all">
           <span>{{ TEXTS.browse_all }}</span>
         </div>

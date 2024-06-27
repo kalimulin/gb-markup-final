@@ -77,49 +77,19 @@
       </div>
     </header>
     <router-view/>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__socials">
-          <div class="footer__social">
-            <img
-              src="@/assets/img/socials/facebook.svg"
-              class="footer__social-img"
-              alt="social"
-            >
-          </div>
-          <div class="footer__social">
-            <img
-              src="@/assets/img/socials/intstagram.svg"
-              class="footer__social-img"
-              alt="social"
-            >
-          </div>
-          <div class="footer__social">
-            <img
-              src="@/assets/img/socials/pinterest.svg"
-              class="footer__social-img"
-              alt="social"
-            >
-          </div>
-          <div class="footer__social">
-            <img
-              src="@/assets/img/socials/twitter.svg"
-              class="footer__social-img"
-              alt="social"
-            >
-          </div>
-        </div>
-        <div class="footer__copyright">{{ TEXTS.copyright }}</div>
-      </div>
-    </footer>
+    <Footer :text-copyright="TEXTS.copyright" />
   </div>
 </template>
 
 <script>
 import { TEXTS, POPUP_MENU } from '@/components/constants'
+import Footer from '@/components/FooterComponent'
 
 export default {
   name: 'App',
+  components: {
+    Footer
+  },
   data: () => {
     return {
       openMenu: false
