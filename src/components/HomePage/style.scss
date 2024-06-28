@@ -1,7 +1,5 @@
 @import "@/assets/scss/mixins";
 
-// ------------------ Banner ---------------------
-
 .banner {
   height: 363px;
   display: flex;
@@ -132,8 +130,9 @@
   justify-content: center;
   align-items: center;
   aspect-ratio: 343/247;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
+  transition: background-size .3s;
 
   @include tablet {
     width: 232px;
@@ -152,6 +151,10 @@
       margin-top: unset;
     }
   }
+
+  &:hover {
+    background-size: 110%;
+  }
 }
 
 .section:last-child {
@@ -166,6 +169,10 @@
   @include desktop {
     height: 180px;
     margin-top: 30px;
+  }
+
+  &:hover {
+    background-size: 105%;
   }
 }
 
@@ -236,9 +243,10 @@ $sections: women, men, kids, accesories;
   align-items: center;
   width: 212px;
   height: 48px;
-  border: 1px solid var(--POMPELMO);
-  color: var(--PONCEAU);
   font-size: 16px;
+  color: var(--PONCEAU);
+  border: 1px solid var(--POMPELMO);
+  transition: background-color .3s, color .3s;
 
   @include tablet {
     margin-top: 32px;
@@ -247,217 +255,9 @@ $sections: women, men, kids, accesories;
   @include desktop {
     margin-top: 48px;
   }
-}
 
-// ------------------ Capabilities ---------------------
-
-.capabilities {
-  padding: 48px 0 80px;
-  background-color: var(--VERIFIED_BLACK);
-  color: var(--WHITEOUT);
-
-  @include tablet {
-    padding: 48px 0 64px;
-  }
-
-  @include desktop {
-    padding: 104px 0;
-    gap: 30px;
-  }
-
-  & > .container {
-    @include desktop {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-}
-
-.capabilities__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  line-height: 1;
-  color: var(--WHITEOUT);
-
-  @include desktop {
-    width: 360px;
-    padding: 0 30px;
-  }
-
-  & + & {
-    margin-top: 47px;
-
-    @include tablet {
-      margin-top: 48px;
-    }
-
-    @include desktop {
-      margin-top: unset;
-    }
-  }
-}
-
-.capabilities__item-icon {
-  width: 38px;
-}
-
-.capabilities__item-title {
-  margin-top: 28px;
-  font-size: 20px;
-
-  @include tablet {
-    margin-top: 20px;
-    font-size: 20px;
-  }
-
-  @include desktop {
-    margin-top: 28px;
-    font-size: 20px;
-  }
-}
-
-
-.capabilities__item-subtitle {
-  margin-top: 14px;
-  padding: 0 15px;
-  font-size: 14px;
-  font-weight: 300;
-
-  @include tablet {
-    margin-top: 16px;
-    font-size: 14px;
-    max-width: 340px;
-  }
-
-  @include desktop {
-    margin-top: 16px;
-    font-size: 14px;
-  }
-}
-
-// ------------------ Review ---------------------
-
-.review {
-  padding: 64px 0 110px;
-  color: var(--VERIFIED_BLACK);
-  text-align: center;
-  line-height: 1 ;
-  background-size: cover;
-  background-position: center bottom;
-
-  @include mobile-only {
-    background-image: url("@/assets/img/subscribe-bg.png");
-  }
-
-  @include tablet {
-    padding: 64px 0 140px;
-    background-position: center;
-  }
-
-  @include tablet-only {
-    background-image: url("@/assets/img/subscribe-bg-tablet.png");
-  }
-
-  @include desktop {
-    padding: 97px 0 126px;
-    background-image: url("@/assets/img/subscribe-bg-desktop.png");
-  }
-
-  & > .container {
-    @include desktop {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }
-}
-
-.review__ava {
-  margin: 0 auto;
-  width: 96px;
-}
-
-.review__text {
-  margin: 30px auto 0;
-  font-size: 20px;
-  font-style: italic;
-
-  @include tablet {
-    max-width: 360px;
-  }
-}
-
-// ------------------ Subscribe ---------------------
-
-.subscribe {
-  margin-top: 59px;
-
-  @include tablet {
-    margin-top: 56px;
-  }
-
-  @include desktop {
-    margin-top: unset;
-    width: 560px;
-  }
-}
-
-.subscribe__title {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.subscribe__subtitle {
-  font-size: 14px;
-  margin-top: 4px;
-
-  @include tablet {
-    font-size: 18px;
-  }
-
-  @include desktop {
-    margin-top: 8px;
-  }
-}
-
-.subscribe__email {
-  margin-top: 22px;
-  display: flex;
-  height: 48px;
-  font-size: 14px;
-  line-height: 48px;
-
-  @include tablet {
-    margin: 27px auto 0;
-    width: 356px;
-  }
-
-  @include desktop {
-    margin-top: 32px;
-    width: 356px;
-    font-size: 14px;
-  }
-}
-
-.subscribe__email-field {
-  padding-left: 24px;
-  border-radius: 24px 0 0 24px;
-  background-color: var(--JUPITER);
-  flex-grow: 1;
-}
-
-.subscribe__email-submit {
-  width: 95px;
-  flex-shrink: 1;
-  background-color: var(--STRAWBERRY_PINK);
-  border-radius: 0 24px 24px 0;
-  color: var(--WHITE);
-  cursor: pointer;
-
-  @include tablet {
-    width: 100px;
+  &:hover {
+    background-color: var(--POMPELMO);
+    color: var(--WHITE);
   }
 }

@@ -1,0 +1,123 @@
+@import "@/assets/scss/mixins";
+
+.review {
+  padding: 64px 0 110px;
+  color: var(--VERIFIED_BLACK);
+  text-align: center;
+  line-height: 1 ;
+  background-size: cover;
+  background-position: center bottom;
+
+  @include mobile-only {
+    background-image: url("@/assets/img/subscribe-bg.png");
+  }
+
+  @include tablet {
+    padding: 64px 0 140px;
+    background-position: center;
+  }
+
+  @include tablet-only {
+    background-image: url("@/assets/img/subscribe-bg-tablet.png");
+  }
+
+  @include desktop {
+    padding: 97px 0 126px;
+    background-image: url("@/assets/img/subscribe-bg-desktop.png");
+  }
+
+  & > .container {
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.review__ava {
+  margin: 0 auto;
+  width: 96px;
+}
+
+.review__text {
+  margin: 30px auto 0;
+  font-size: 20px;
+  font-style: italic;
+
+  @include tablet {
+    max-width: 360px;
+  }
+}
+
+// ------------------ Subscribe ---------------------
+
+.subscribe {
+  margin-top: 59px;
+
+  @include tablet {
+    margin-top: 56px;
+  }
+
+  @include desktop {
+    margin-top: unset;
+    width: 560px;
+  }
+}
+
+.subscribe__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.subscribe__subtitle {
+  font-size: 14px;
+  margin-top: 4px;
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include desktop {
+    margin-top: 8px;
+  }
+}
+
+.subscribe__email {
+  margin-top: 22px;
+  display: flex;
+  height: 48px;
+  font-size: 14px;
+  line-height: 48px;
+
+  @include tablet {
+    margin: 27px auto 0;
+    width: 356px;
+  }
+
+  @include desktop {
+    margin-top: 32px;
+    width: 356px;
+    font-size: 14px;
+  }
+}
+
+.subscribe__email-field {
+  padding-left: 24px;
+  border-radius: 24px 0 0 24px;
+  background-color: var(--JUPITER);
+  flex-grow: 1;
+}
+
+.subscribe__email-submit {
+  width: 95px;
+  flex-shrink: 1;
+  background-color: var(--STRAWBERRY_PINK);
+  border-radius: 0 24px 24px 0;
+  color: var(--WHITE);
+  cursor: pointer;
+
+  @include tablet {
+    width: 100px;
+  }
+}

@@ -15,8 +15,9 @@
     </section>
     <section class="sections">
       <div class="container">
-        <div
-          v-for="{ str1, str2, classSuffix } in SECTIONS"
+        <router-link
+          :to="path"
+          v-for="{ str1, str2, classSuffix, path } in SECTIONS"
           :key="str2"
           class="sections__item section"
           :class="`section_${classSuffix}`"
@@ -25,7 +26,7 @@
             <div class="section__text1">{{ str1 }}</div>
             <div class="section__text2">{{ str2 }}</div>
           </div>
-        </div>
+        </router-link>
       </div>
     </section>
     <section class="featured">
@@ -35,76 +36,26 @@
         <div class="featured__product-list">
           <product-list :product-list="FEATURED_ITEMS" />
         </div>
-        <div class="featured__browse-all">
+        <router-link
+          to="/catalog"
+          class="featured__browse-all"
+        >
           <span>{{ TEXTS.browse_all }}</span>
-        </div>
+        </router-link>
       </div>
     </section>
-    <section class="capabilities">
-      <div class="container">
-        <div class="capabilities__item">
-          <div class="capabilities__item-icon">
-            <img
-              src="@/assets/img/icon-truck.svg"
-              alt="delivery"
-            >
-          </div>
-          <div class="capabilities__item-title">{{ CAPABILITIES.freeDelivery.title }}</div>
-          <div class="capabilities__item-subtitle">{{ CAPABILITIES.freeDelivery.subtitle }}</div>
-        </div>
-        <div class="capabilities__item">
-          <div class="capabilities__item-icon">
-            <img
-              src="@/assets/img/icon-discount.svg"
-              alt="discounts"
-            >
-          </div>
-          <div class="capabilities__item-title">{{ CAPABILITIES.salesDiscounts.title }}</div>
-          <div class="capabilities__item-subtitle">{{ CAPABILITIES.salesDiscounts.subtitle }}</div>
-        </div>
-        <div class="capabilities__item">
-          <div class="capabilities__item-icon">
-            <img
-              src="@/assets/img/icon-crown.svg"
-              alt="quality"
-            >
-          </div>
-          <div class="capabilities__item-title">{{ CAPABILITIES.qualityAssurance.title }}</div>
-          <div class="capabilities__item-subtitle">{{ CAPABILITIES.qualityAssurance.subtitle }}</div>
-        </div>
-      </div>
-    </section>
-    <section class="review">
-      <div class="container">
-        <div>
-          <div class="review__ava">
-            <img
-              src="img/avatar1.png"
-              alt="user"
-            >
-          </div>
-          <div class="review__text">{{ TEXTS.review_text }}</div>
-        </div>
-        <div class="subscribe">
-          <div class="subscribe__title">{{ TEXTS.subscribe_title }}</div>
-          <div class="subscribe__subtitle">{{ TEXTS.subscribe_subtitle }}</div>
-          <form class="subscribe__email">
-            <input type="email" class="subscribe__email-field" :placeholder="TEXTS.enter_email" />
-            <div class="subscribe__email-submit">{{ TEXTS.subscribe }}</div>
-          </form>
-        </div>
-      </div>
-    </section>
+    <Capabilities />
   </div>
 </template>
 
 <script>
 import { CAPABILITIES, FEATURED_ITEMS, SECTIONS, TEXTS } from '@/components/constants'
 import ProductList from '@/components/ProductListComponent/index.vue'
+import Capabilities from '@/components/CapabilitiesComponent/index.vue'
 
 export default {
   name: 'HomeView',
-  components: { ProductList },
+  components: { Capabilities, ProductList },
   created () {
     this.TEXTS = TEXTS
     this.SECTIONS = SECTIONS

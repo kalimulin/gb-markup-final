@@ -15,9 +15,9 @@
 
 .product-list__item {
   padding-bottom: 20px;
+  display: block;
   text-align: left;
   background-color: var(--PEARL);
-  cursor: pointer;
 
   @include tablet {
     flex-basis: 360px;
@@ -32,7 +32,47 @@
   }
 }
 
+.product-list__image {
+  position: relative;
+}
+
+.product-list__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--BOLTGUN_METAL_086);
+  opacity: 0;
+  transition: opacity .3s;
+
+  .product-list__image:hover & {
+    opacity: 1;
+  }
+}
+
+.product-list__add {
+  padding: 12px 12px 8px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--WHITE);
+
+  span {
+    margin-left: 12px;
+    font-size: 14px;
+    color: var(--WHITE);
+  }
+}
+
+.product-list__add-icon {
+  width: 26px;
+}
+
 .product-list__item-text {
+  display: block;
   padding: 0 16px;
 }
 
