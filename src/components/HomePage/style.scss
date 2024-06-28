@@ -130,8 +130,9 @@
   justify-content: center;
   align-items: center;
   aspect-ratio: 343/247;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
+  transition: background-size .3s;
 
   @include tablet {
     width: 232px;
@@ -150,6 +151,10 @@
       margin-top: unset;
     }
   }
+
+  &:hover {
+    background-size: 110%;
+  }
 }
 
 .section:last-child {
@@ -164,6 +169,10 @@
   @include desktop {
     height: 180px;
     margin-top: 30px;
+  }
+
+  &:hover {
+    background-size: 105%;
   }
 }
 
@@ -234,9 +243,10 @@ $sections: women, men, kids, accesories;
   align-items: center;
   width: 212px;
   height: 48px;
-  border: 1px solid var(--POMPELMO);
-  color: var(--PONCEAU);
   font-size: 16px;
+  color: var(--PONCEAU);
+  border: 1px solid var(--POMPELMO);
+  transition: background-color .3s, color .3s;
 
   @include tablet {
     margin-top: 32px;
@@ -244,5 +254,10 @@ $sections: women, men, kids, accesories;
 
   @include desktop {
     margin-top: 48px;
+  }
+
+  &:hover {
+    background-color: var(--POMPELMO);
+    color: var(--WHITE);
   }
 }
