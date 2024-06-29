@@ -1,7 +1,10 @@
 <template>
   <div class="catalog-page">
+    <Breadcrumbs title="NEW ARRIVALS" path="HOME / MEN / <span>NEW ARRIVALS</span>" />
     <div class="container">
-      <product-list :product-list="PRODUCTS" />
+      <div class="catalog-page__products">
+        <product-list :product-list="PRODUCTS" />
+      </div>
     </div>
     <Capabilities />
   </div>
@@ -11,10 +14,11 @@
 import { PRODUCTS } from '@/components/constants'
 import ProductList from '@/components/ProductListComponent/index.vue'
 import Capabilities from '@/components/CapabilitiesComponent/index.vue'
+import Breadcrumbs from '@/components/BreadcrumbsComponent/index.vue'
 
 export default {
   name: 'HomeView',
-  components: { Capabilities, ProductList },
+  components: { Breadcrumbs, Capabilities, ProductList },
   created () {
     this.PRODUCTS = PRODUCTS
   }

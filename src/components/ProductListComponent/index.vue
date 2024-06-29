@@ -7,7 +7,11 @@
         class="product-list__item"
       >
         <div class="product-list__image">
-          <img :src="`${img}`" alt="product-list">
+          <img
+            :src="`${img}`"
+            alt="product-list"
+            @click="$router.push('/product')"
+          >
           <div class="product-list__overlay">
             <router-link
               to="/cart"
