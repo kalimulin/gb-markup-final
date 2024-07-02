@@ -1,5 +1,8 @@
 <template>
-  <div class="landing">
+  <div
+    class="landing"
+    :class="{touch}"
+  >
     <Header :texts="TEXTS" :popup-menu="POPUP_MENU" />
     <router-view/>
     <Review />
@@ -22,12 +25,25 @@ export default {
   },
   data: () => {
     return {
-      openMenu: false
+      openMenu: false,
+      touch: false
     }
   },
   created () {
     this.TEXTS = TEXTS
     this.POPUP_MENU = POPUP_MENU
+  },
+  mounted () {
+    if (this.isTouchDevice()) {
+      this.touch = true
+    }
+  },
+  methods: {
+    isTouchDevice () {
+      return (('ontouchstart' in window) ||
+        (navigator.maxTouchPoints > 0) ||
+        (navigator.msMaxTouchPoints > 0))
+    }
   }
 }
 </script>

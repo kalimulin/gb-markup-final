@@ -1,13 +1,25 @@
 <template>
   <div class="breadcrumbs">
-    <div class="breadcrumbs__title">NEW ARRIVALS</div>
-    <div class="breadcrumbs__path">Cart page</div>
+    <div class="container">
+      <div class="breadcrumbs__title">{{ title }}</div>
+      <div class="breadcrumbs__path"  v-html="path"></div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BreadcrumbsComponent'
+  name: 'BreadcrumbsComponent',
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    path: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 

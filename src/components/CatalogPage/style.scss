@@ -1,0 +1,21 @@
+@import "@/assets/scss/mixins";
+
+.catalog-page__products {
+  padding: 24px 0 64px;
+
+  @include desktop {
+    padding: 48px 0 96px;
+  }
+}
+
+.catalog-page__pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  color: var(--KNIGHTS_ARMOR);
+  font-size: 16px;
+
+  @include desktop {
+    margin-top: 48px;
+  }
+}
