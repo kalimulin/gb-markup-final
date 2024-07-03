@@ -10,7 +10,7 @@
       </div>
       <div class="slideshow__slides">
         <div class="slideshow__slide">
-          <img src="/img/product_image.jpg" alt="product">
+          <img src="img/product_image.jpg" alt="product">
         </div>
       </div>
     </section>
