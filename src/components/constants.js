@@ -119,6 +119,25 @@ export const PRODUCTS = [
   }
 ]
 
+export const CART = [
+  {
+    title: 'MANGO  PEOPLE T-SHIRT',
+    price: '$300',
+    color: 'Red',
+    size: 'XL',
+    quantity: 2,
+    img: 'img/cart-image-1.jpg'
+  },
+  {
+    title: 'MANGO  PEOPLE T-SHIRT',
+    price: '$300',
+    color: 'Red',
+    size: 'XL',
+    quantity: 2,
+    img: 'img/cart-image-2.jpg'
+  }
+]
+
 export const CAPABILITIES = {
   freeDelivery: {
     title: 'Free Delivery',
