@@ -34,10 +34,10 @@
             <IconChevronDown/>
           </div>
         </div>
-        <div class="product-page__button-add">
+        <router-link to="/cart" class="product-page__button-add">
           <IconCart />
           <span>Add to Cart</span>
-        </div>
+        </router-link>
       </div>
     </div>
     <div class="product-page__other-products">

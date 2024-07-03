@@ -9,6 +9,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include desktop {
+      position: relative;
+      margin-top: -128px;
+      padding: 64px 0;
+      background-color: var(--WHITE);
+      border: 1px solid var(--PLASTER);
+      z-index: 1;
+    }
   }
 }
 
@@ -41,6 +50,7 @@
   font-size: 14px;
   line-height: 20px;
   color: var(--IRON);
+  max-width: 575px;
 }
 
 .product-page__price {
@@ -58,6 +68,11 @@
     width: 175px;
     background-color: var(--PLASTER);
     transform: translate(-50%, 0);
+
+    @include tablet {
+      bottom: -58px;
+      width: 641px;
+    }
   }
 }
 
@@ -69,6 +84,11 @@
   gap: 24px;
   font-size: 10px;
   color: var(--WELDED_IRON);
+
+  @include tablet {
+    margin-top: 130px;
+    font-size: 14px;
+  }
 }
 
 .product-page__choose {
@@ -93,6 +113,10 @@
   color: var(--PONCEAU);
   border: 1px solid var(--POMPELMO);
 
+  @include tablet {
+    margin-top: 48px;
+  }
+
   svg {
     fill: var(--PINK_PEPPER)
   }
@@ -110,6 +134,12 @@
 
 .product-page__other-products {
   padding-top: 64px;
+  padding-bottom: 64px;
+
+  @include tablet {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
 }
 
 .slideshow {
@@ -118,6 +148,14 @@
   background-color: var(--LYNX_WHITE);
   border-top: 1px solid var(--PLASTER);
   border-bottom: 1px solid var(--PLASTER);
+
+  @include tablet {
+    padding: 30px 0;
+  }
+
+  @include desktop {
+    padding: 10px 0 42px;
+  }
 }
 
 .slideshow__prev, .slideshow__next {
@@ -155,3 +193,9 @@
   }
 }
 
+.slideshow__slide {
+  @include tablet {
+    margin: 0 auto;
+    width: 466px;
+  }
+}
