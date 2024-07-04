@@ -14,10 +14,10 @@
             </div>
             <div class="cart-page__item-desc">
               <div class="cart-page__item-title">{{ title }}</div>
-              <div class="cart-page__item-price">Price: {{ price }}</div>
+              <div class="cart-page__item-price">Price: <span>{{ price }}</span></div>
               <div class="cart-page__item-color">Color: {{ color }}</div>
               <div class="cart-page__item-size">Size: {{ size }}</div>
-              <div class="cart-page__item-quantity">Quantity: {{ quantity }}</div>
+              <div class="cart-page__item-quantity">Quantity: <input type="number" :value="quantity"></div>
             </div>
             <div class="cart-page__item-close">
               <IconClose />
@@ -33,8 +33,27 @@
           </div>
         </div>
         <div class="cart-page__right">
+          <div class="cart-page__address-title">SHIPPING ADRESS</div>
           <div class="cart-page__address">
-            <div class="cart-page__address-title">SHIPPING ADRESS</div>
+            <form action="/" class="form">
+              <input type="text" name="country" class="form__field" placeholder="Country">
+              <input type="text" name="state" class="form__field" placeholder="State">
+              <input type="text" name="zip" class="form__field" placeholder="Postcode / ZIP">
+              <button type="submit" class="cart-page__button">
+                Get a quote
+              </button>
+            </form>
+          </div>
+          <div class="cart-page__checkout">
+            <div class="cart-page__checkout-subtotal">
+              SUB TOTAL<span>$900</span>
+            </div>
+            <div class="cart-page__checkout-grand-total">
+              GRAND TOTAL<span>$900</span>
+            </div>
+            <div class="cart-page__checkout-button">
+              PROCEED TO CHECKOUT
+            </div>
           </div>
         </div>
       </div>
