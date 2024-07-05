@@ -1,3 +1,58 @@
+@import "@/assets/scss/mixins";
+
 .registration-page__content {
   padding: 48px 0 96px;
+}
+
+.registration-page__button {
+  margin-top: 38px;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--WHITE);
+  background-color: var(--STRAWBERRY_PINK);
+  text-transform: uppercase;
+
+  svg {
+    margin-left: 20px;
+    fill: var(--WHITE);
+  }
+}
+
+.registration-page__perks {
+  margin-top: 40px;
+
+  @include tablet {
+    margin-top: unset;
+  }
+}
+
+.perks {
+  font-size: 16px;
+  color: var(--BLACK);
+}
+
+.perks__title {
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.perks__list {
+  margin-top: 22px;
+}
+
+.perks__list-item {
+  display: flex;
+  align-items: flex-start;
+  line-height: 1;
+
+  & + & {
+    margin-top: 16px;
+  }
+
+  svg {
+    margin-right: 22px;
+    fill: var(--BLACK);
+  }
 }

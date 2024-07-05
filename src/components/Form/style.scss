@@ -8,3 +8,38 @@
   color: var(--BLACK_OUT);
   border: 1px solid var(--RAINY_GREY);
 }
+
+.form__label {
+  font-size: 16px;
+}
+
+.form__group {
+  & + & {
+    margin-top: 30px;
+  }
+}
+
+.form__radio-buttons {
+  display: flex;
+}
+
+.form__radio-button {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+
+  & + & {
+    margin-left: 20px;
+  }
+
+  input {
+    margin-right: 10px;
+  }
+}
+
+.form__tip {
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--PALLADIUM);
+}
