@@ -8,6 +8,10 @@
     padding: 60px 0 128px;
   }
 
+  @include desktop {
+    padding: 96px 0 128px;
+  }
+
   & > .container {
     @include desktop {
       display: flex;
@@ -35,6 +39,10 @@
 
   & + & {
     margin-top: 32px;
+
+    @include desktop {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -132,6 +140,11 @@
     justify-content: center;
     gap: 48px;
   }
+
+  @include desktop {
+    justify-content: space-between;
+    margin-top: 72px;
+  }
 }
 
 .cart-page__button {
@@ -147,6 +160,13 @@
     flex: 0;
     font-size: 14px;
     text-transform: uppercase;
+  }
+
+  @include desktop {
+    height: 50px;
+    padding: 0 40px;
+    line-height: 50px;
+    flex: unset;
   }
 
   .form & {
@@ -197,6 +217,10 @@
   @include tablet {
     margin-top: unset;
     width: 360px;
+  }
+
+  @include desktop {
+    margin-top: 57px;
   }
 }
 
