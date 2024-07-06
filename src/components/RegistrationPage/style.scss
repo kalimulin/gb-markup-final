@@ -2,6 +2,23 @@
 
 .registration-page__content {
   padding: 48px 0 96px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+  }
+
+  @include desktop {
+    gap: 128px;
+  }
+}
+
+.registration-page__form {
+  @include tablet {
+    flex-basis: 360px;
+    flex-shrink: 0;
+  }
 }
 
 .registration-page__button {
@@ -31,6 +48,10 @@
 .perks {
   font-size: 16px;
   color: var(--BLACK);
+
+  @include desktop {
+    font-size: 24px;
+  }
 }
 
 .perks__title {
