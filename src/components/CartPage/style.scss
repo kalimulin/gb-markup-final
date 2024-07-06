@@ -29,8 +29,11 @@
   transition: box-shadow .3s;
 
   @include tablet {
-    width: 652px;
     height: 306px;
+  }
+
+  @include desktop {
+    width: 652px;
   }
 
   &:hover {
