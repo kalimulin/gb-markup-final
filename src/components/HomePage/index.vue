@@ -34,7 +34,10 @@
         <div class="featured__title">{{ TEXTS.featured_title }}</div>
         <div class="featured__subtitle">{{ TEXTS.featured_subtitle }}</div>
         <div class="featured__product-list">
-          <product-list :product-list="FEATURED_ITEMS" />
+          <product-list
+            :product-list="FEATURED_ITEMS"
+            @add="addToCart"
+          />
         </div>
         <router-link
           to="/catalog"
@@ -45,6 +48,37 @@
       </div>
     </section>
     <Capabilities />
+    <div class="container">
+      <div
+        class="home-page__cart-items"
+        v-if="cart && cart.length"
+      >
+        <div class="cart-page__items">
+          <div
+            class="cart-page__item"
+            v-for="({ title, price, color, size, quantity, img, id }, number) in cart"
+            :key="number"
+          >
+            <div class="cart-page__item-img">
+              <img :src="img">
+            </div>
+            <div class="cart-page__item-desc">
+              <div class="cart-page__item-title">{{ title }}</div>
+              <div class="cart-page__item-price">Price: <span>{{ price }}</span></div>
+              <div class="cart-page__item-color">Color: {{ color }}</div>
+              <div class="cart-page__item-size">Size: {{ size }}</div>
+              <div class="cart-page__item-quantity">Quantity: <input type="number" :value="quantity"></div>
+            </div>
+            <div
+              class="cart-page__item-close"
+              @click="removeFromCart(id)"
+            >
+              <IconClose />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -52,15 +86,39 @@
 import { CAPABILITIES, FEATURED_ITEMS, SECTIONS, TEXTS } from '@/components/constants'
 import ProductList from '@/components/ProductListComponent/index.vue'
 import Capabilities from '@/components/CapabilitiesComponent/index.vue'
+import IconClose from '@/svg/icon-close.vue'
 
 export default {
   name: 'HomeView',
-  components: { Capabilities, ProductList },
+  components: { IconClose, Capabilities, ProductList },
+  data () {
+    return {
+      cart: []
+    }
+  },
   created () {
     this.TEXTS = TEXTS
     this.SECTIONS = SECTIONS
     this.FEATURED_ITEMS = FEATURED_ITEMS
     this.CAPABILITIES = CAPABILITIES
+  },
+  methods: {
+    addToCart (item) {
+      let quantity = 1
+      const existed = this.cart.find(product => product.id === item.id)
+
+      if (existed) {
+        quantity = existed.quantity + 1
+        existed.quantity = quantity
+      } else {
+        this.cart.push({ ...item, quantity: 1 })
+      }
+
+      this.$emit('update', this.cart)
+    },
+    removeFromCart (id) {
+      this.cart = this.cart.filter(item => item.id !== id)
+    }
   }
 }
 </script>
